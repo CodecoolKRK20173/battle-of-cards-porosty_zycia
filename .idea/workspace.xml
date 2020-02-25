@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a42045c0-b7e5-4e20-aec0-272eef553658" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/BattleCards/src/com/codecool/Card.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1YITtQt7r1GvfncjCUqL24RC7as" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.codecool.Main" />
+      <module name="battle-of-cards-porosty_zycia" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a42045c0-b7e5-4e20-aec0-272eef553658" name="Default Changelist" comment="" />
+      <created>1582629322845</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582629322845</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="246" y="61" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582629397587">
+      <screen x="56" y="27" width="1310" height="741" />
+    </state>
+    <state x="246" y="61" key="#com.intellij.execution.impl.EditConfigurationsDialog/56.27.1310.741@56.27.1310.741" timestamp="1582629397587" />
+    <state x="56" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1582633339629">
+      <screen x="56" y="27" width="1310" height="741" />
+    </state>
+    <state x="56" y="31" width="1022" height="737" key="SettingsEditor/56.27.1310.741@56.27.1310.741" timestamp="1582633339629" />
+  </component>
+</project>
