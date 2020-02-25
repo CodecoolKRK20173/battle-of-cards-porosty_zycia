@@ -1,7 +1,7 @@
 <?xml version = "1.0"?>
 <class>
     <player id="1">
-        <name>Robert lewandowski</name>
+        <name>Robert Lewandowski</name>
         <pace>90</pace>
         <shooting>99</shooting>
         <passing>85</passing>

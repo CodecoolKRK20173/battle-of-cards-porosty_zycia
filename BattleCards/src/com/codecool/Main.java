@@ -15,6 +15,7 @@ public class Main {
 
 
 
+
             //ESProvider esProvider = new ESProvider(ruleParser,  factParser);
             //esProvider.collectAnswers();
 

@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a42045c0-b7e5-4e20-aec0-272eef553658" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BattleCards/src/com/codecool/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BattleCards/src/com/codecool/PrintTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleCards/src/com/codecool/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/BattleCards/src/com/codecool/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleCards/src/com/codecool/parser/XmlPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/BattleCards/src/com/codecool/parser/XmlPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleCards/src/com/codecool/resources/players.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BattleCards/src/com/codecool/resources/players.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="players" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -60,10 +65,51 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="246" y="61" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582629397587">
-      <screen x="56" y="27" width="1310" height="741" />
+    <state x="479" y="227" key="#Project_Structure" timestamp="1582644363298">
+      <screen x="0" y="23" width="1920" height="1020" />
     </state>
+    <state x="479" y="227" key="#Project_Structure/0.23.1920.1020@0.23.1920.1020" timestamp="1582644363298" />
+    <state x="278" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582647167899">
+      <screen x="0" y="23" width="1920" height="1020" />
+    </state>
+    <state x="278" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1020@0.23.1920.1020" timestamp="1582647167899" />
     <state x="246" y="61" key="#com.intellij.execution.impl.EditConfigurationsDialog/56.27.1310.741@56.27.1310.741" timestamp="1582629397587" />
+    <state x="692" y="271" key="#com.intellij.ide.util.MemberChooser" timestamp="1582650584108">
+      <screen x="0" y="23" width="1920" height="1020" />
+    </state>
+    <state x="692" y="271" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1020@0.23.1920.1020" timestamp="1582650584108" />
+    <state width="1479" height="270" key="GridCell.Tab.0.bottom" timestamp="1582657923737">
+      <screen x="0" y="23" width="1920" height="1020" />
+    </state>
+    <state width="1479" height="270" key="GridCell.Tab.0.bottom/0.23.1920.1020@0.23.1920.1020" timestamp="1582657923737" />
+    <state width="1479" height="270" key="GridCell.Tab.0.center" timestamp="1582657923735">
+      <screen x="0" y="23" width="1920" height="1020" />
+    </state>
+    <state width="1479" height="270" key="GridCell.Tab.0.center/0.23.1920.1020@0.23.1920.1020" timestamp="1582657923735" />
+    <state width="1479" height="270" key="GridCell.Tab.0.left" timestamp="1582657923734">
+      <screen x="0" y="23" width="1920" height="1020" />
+    </state>
+    <state width="1479" height="270" key="GridCell.Tab.0.left/0.23.1920.1020@0.23.1920.1020" timestamp="1582657923734" />
+    <state width="1479" height="270" key="GridCell.Tab.0.right" timestamp="1582657923736">
+      <screen x="0" y="23" width="1920" height="1020" />
+    </state>
+    <state width="1479" height="270" key="GridCell.Tab.0.right/0.23.1920.1020@0.23.1920.1020" timestamp="1582657923736" />
+    <state width="1479" height="270" key="GridCell.Tab.1.bottom" timestamp="1582657923571">
+      <screen x="0" y="23" width="1920" height="1020" />
+    </state>
+    <state width="1479" height="270" key="GridCell.Tab.1.bottom/0.23.1920.1020@0.23.1920.1020" timestamp="1582657923571" />
+    <state width="1479" height="270" key="GridCell.Tab.1.center" timestamp="1582657923570">
+      <screen x="0" y="23" width="1920" height="1020" />
+    </state>
+    <state width="1479" height="270" key="GridCell.Tab.1.center/0.23.1920.1020@0.23.1920.1020" timestamp="1582657923570" />
+    <state width="1479" height="270" key="GridCell.Tab.1.left" timestamp="1582657923569">
+      <screen x="0" y="23" width="1920" height="1020" />
+    </state>
+    <state width="1479" height="270" key="GridCell.Tab.1.left/0.23.1920.1020@0.23.1920.1020" timestamp="1582657923569" />
+    <state width="1479" height="270" key="GridCell.Tab.1.right" timestamp="1582657923570">
+      <screen x="0" y="23" width="1920" height="1020" />
+    </state>
+    <state width="1479" height="270" key="GridCell.Tab.1.right/0.23.1920.1020@0.23.1920.1020" timestamp="1582657923570" />
     <state x="56" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1582633339629">
       <screen x="56" y="27" width="1310" height="741" />
     </state>
