@@ -38,10 +38,10 @@
 
     <player id="5">
         <name>Paweł Brożek</name>
-        <pace>100</pace>
-        <shooting>100</shooting>
-        <dribling>100</dribling>
-        <defending>100</defending>
+        <pace>99</pace>
+        <shooting>99</shooting>
+        <dribling>99</dribling>
+        <defending>99</defending>
     </player>
     <player id="6">
         <name>Christiano Ronaldo</name>
@@ -219,7 +219,7 @@
         <defending>21</defending>
     </player>
     <player id="31">
-        <name>Andrzej Juskowial</name>
+        <name>Andrzej Juskowiak</name>
         <pace>78</pace>
         <shooting>88</shooting>
         <dribling>66</dribling>

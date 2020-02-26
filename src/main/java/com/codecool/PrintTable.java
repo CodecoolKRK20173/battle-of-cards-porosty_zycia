@@ -31,7 +31,7 @@ public class PrintTable {
 
     public void printTable(Card activePlayerCard, Card inactivePlayerCard) throws ParserConfigurationException, SAXException, IOException {
 
-        String format = "                                               |%-30s %2s| %-22s |%-30s %2s|";
+        String format = "                                               |%-32s %2s| %-22s |%-32s %2s|";
 
 
 
@@ -39,10 +39,12 @@ public class PrintTable {
 
 
 
-        System.out.println("\n                                               |-------------------------|                                             |-------------------------|");
+        System.out.println("\n                                               |-----------------------------------|                                             |-----------------------------------|");
+        System.out.println("                                               |----------< PLAYER ONE >-----------|                                             |------------< PLAYER TWO >---------|");
+        System.out.println("                                               |-----------------------------------|                                             |-----------------------------------|");
         System.out.printf(format, "Card Id: ", activePlayerCard.getId(), "-------------------------------------------", "Card Id: ", inactivePlayerCard.getId());
         System.out.println();
-        System.out.printf(format, Chalk.on(activePlayerCard.getName()).red(), "            ", "-------------------------------------------", Chalk.on(inactivePlayerCard.getName()).red(),"      ");
+        System.out.printf(format, Chalk.on(activePlayerCard.getName()).red(), "            ", "-------------------------------------------", Chalk.on(inactivePlayerCard.getName()).red(),"            ");
         System.out.println();
         System.out.printf(format, "Pace:", activePlayerCard.getPace(), "-------------------------------------------", "Pace: ", inactivePlayerCard.getPace(),"");
         System.out.println();
@@ -51,7 +53,7 @@ public class PrintTable {
         System.out.printf(format, "Dribbling:", activePlayerCard.getDribbling(), "-------------------------------------------", "Dribbling", inactivePlayerCard.getDribbling(),"");
         System.out.println();
         System.out.printf(format, "Defending:", activePlayerCard.getDefending(), "-------------------------------------------", "Defending", inactivePlayerCard.getDefending(),"");
-        System.out.println("\n                                               |-------------------------|                                             |-------------------------|");
+        System.out.println("\n                                               |-----------------------------------|                                             |-----------------------------------|");
 
 
     }
