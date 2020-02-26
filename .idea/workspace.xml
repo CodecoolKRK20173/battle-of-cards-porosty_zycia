@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="838aedc3-5339-43bc-8078-ac070542ed5d" name="Default Changelist" comment="Add players parser 1" />
+    <list default="true" id="838aedc3-5339-43bc-8078-ac070542ed5d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582634228340</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add players parser">
+      <created>1582711645858</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582711645859</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -96,10 +103,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="488" y="271" width="293" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.760@0.0.1280.760" timestamp="1582706274600" />
-    <state x="223" y="0" width="823" height="755" key="CommitChangelistDialog2" timestamp="1582705733481">
+    <state x="223" y="0" width="823" height="755" key="CommitChangelistDialog2" timestamp="1582711645373">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="223" y="0" width="823" height="755" key="CommitChangelistDialog2/0.0.1280.760@0.0.1280.760" timestamp="1582705733481" />
+    <state x="223" y="0" width="823" height="755" key="CommitChangelistDialog2/0.0.1280.760@0.0.1280.760" timestamp="1582711645373" />
     <state width="1238" height="184" key="GridCell.Tab.0.bottom" timestamp="1582635380605">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
