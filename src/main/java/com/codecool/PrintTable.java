@@ -19,48 +19,25 @@ public class PrintTable {
         XmlPlayer xmlPlayer = new XmlPlayer();
         xmlPlayer.parse();
         xmlPlayer.getCards();
-        System.out.println(xmlPlayer.getCards().get(1).getName());
-        System.out.println(xmlPlayer.getCards().get(1).getDefending());
-        System.out.println(xmlPlayer.getCards().get(1).getDribbling());
-        System.out.println(xmlPlayer.getCards().get(1).getPace());
-        System.out.println(xmlPlayer.getCards().get(1).getShooting());
 
+        String format = "                                            |%-22s %2s| %-22s |%-22s %2s|";
+        System.out.println("\n                                            |-------------------------|                                             |-------------------------|");
+        System.out.printf(format, "Name: ", "", "-------------------------------------------", "Name: ", "");
+        System.out.println();
+        System.out.printf(format, xmlPlayer.getCards().get(1).getName(), "", "-------------------------------------------", xmlPlayer.getCards().get(2).getName(),"");
+        System.out.println();
+        System.out.printf(format, "Pace:", xmlPlayer.getCards().get(1).getPace(), "-------------------------------------------", "Pace: ", xmlPlayer.getCards().get(2).getPace(),"");
+        System.out.println();
+        System.out.printf(format, "Shooting:", xmlPlayer.getCards().get(1).getShooting(), "-------------------------------------------", "Shooting", xmlPlayer.getCards().get(2).getPace(),"");
+        System.out.println();
+        System.out.printf(format, "Dribbling:", xmlPlayer.getCards().get(1).getDribbling(), "-------------------------------------------", "Dribbling", xmlPlayer.getCards().get(2).getDribbling(),"");
+        System.out.println();
+        System.out.printf(format, "Defending:", xmlPlayer.getCards().get(1).getDefending(), "-------------------------------------------", "Defending", xmlPlayer.getCards().get(2).getDefending(),"");
+        System.out.println("\n                                            |-------------------------|                                             |-------------------------|");
 
 
     }
 
-//    Card card = cards.get(4);
-//    int value = card.getName().length()/2;
-//    int valueSpace = value + 3;
-//    String star = " * ";
-//    String a = " ";
-//        for (int i = 0; i < valueSpace; ++i){
-//        a += " ";
-//    }
-//
-//
-//        for (int i = 0 ; i < value +2; ++i) {
-//        System.out.print(star);
-//    }
-//        System.out.println();
-//        System.out.println(" * Player : " + card.getName() + star);
-//        System.out.println(" *  P a c  e : " + card.getPace() + a + star);
-//        System.out.println(" *  Shooting : " +card.getShooting() + a + star);
-//        System.out.println(" *  Dribling : " + card.getDribbling() + a + star);
-//        System.out.println(" * Defensing : " + card.getDefending() + a + star);
-//        for (int i = 0 ; i < value + 2; ++i) {
-//        System.out.print(star);
-//    }
 
-
-//        for (Card card : cards) {
-//        System.out.println(card.getName());
-//        System.out.println(card.getPace());
-//        System.out.println(card.getShooting());
-//        System.out.println(card.getDribbling());
-//        System.out.println(card.getDefending());
-//
-//
-//    }
 
 }
