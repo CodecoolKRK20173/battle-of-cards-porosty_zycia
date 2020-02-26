@@ -1,14 +1,10 @@
 package com.codecool;
 
-import com.codecool.*;
-import com.codecool.parser.XmlPlayer;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.codecool.parser.XmlCard;
 
 public class PrintTable {
 
-XmlPlayer xmlPlayer = new XmlPlayer();
+XmlCard xmlCard = new XmlCard();
 
 
 

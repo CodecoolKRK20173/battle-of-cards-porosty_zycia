@@ -16,7 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class XmlPlayer extends XmlParser {
+public class XmlCard extends XmlParser {
 
     List<Card> cards = new ArrayList<Card>();
 
@@ -30,8 +30,8 @@ public class XmlPlayer extends XmlParser {
         this.cards = cards;
     }
     public void parse() throws IOException, SAXException, ParserConfigurationException {
-        File fXmlFile = new File("src/com/codecool/resources/players.xml");
-       // "/Users/mzi/Desktop/zADANIA/battle-of-cards-porosty_zycia1/BattleCards/src/com/codecool/resources/players.xml"
+        File fXmlFile = new File("src/main/java/com/codecool/resources/card.xml");
+       // "/Users/mzi/Desktop/zADANIA/battle-of-cards-porosty_zycia1/BattleCards/src/com/codecool/resources/card.xml"
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
         Document doc = dBuilder.parse(fXmlFile);
@@ -101,7 +101,7 @@ public class XmlPlayer extends XmlParser {
         System.out.println(" * Player : " + card.getName() + star);
         System.out.println(" *  P a c  e : " + card.getPace() + a + star);
         System.out.println(" *  Shooting : " +card.getShooting() + a + star);
-        System.out.println(" *  Dribling : " + card.getDribbling() + a + star);
+        System.out.println(" *  Dribbling : " + card.getDribbling() + a + star);
         System.out.println(" * Defensing : " + card.getDefending() + a + star);
         for (int i = 0 ; i < value + 2; ++i) {
             System.out.print(star);
