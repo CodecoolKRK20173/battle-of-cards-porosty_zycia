@@ -20,41 +20,34 @@ public class GameController {
         xmlPlayer.parse();
         HumanPlayer player1 = new HumanPlayer("Mike");
         HumanPlayer player2 = new HumanPlayer("Stan");
+        Player activePlayer = player1;
+        Player inActivePlayer = player2;
 
 
         Deck deck = new Deck(xmlPlayer.getCards());
-//        List<Card> cards = xmlPlayer.getCards();
 
         deck.shuffleCards();
-//        Collections.shuffle(cards);
 
         deck.printCards();
-//        printCards(cards);
-
-        List<Card> hand1 = new ArrayList<>();
-        List<Card> hand2 = new ArrayList<>();
-
         for (int i=0; i < deck.getSize() ; i++) {
             if (i % 2 == 0) {
-                //hand1.add(deck.getCardByIndex(i));
                 player1.addCardToDeck(deck.getCardByIndex(i));
             }else{
                 player2.addCardToDeck(deck.getCardByIndex(i));
             }
         }
         System.out.println("hand1");
-       player1.printCards(player1.getDeck());
+        player1.printCards();
         System.out.println("hand2");
-        player2.printCards(player2.getDeck());
+        player2.printCards();
 
-
+        while (player1.hasCards() && player2.hasCards()) {
+            Card activePlayerCard = activePlayer.getTopCard();
+            Card inActivePlayerCard = inActivePlayer.getTopCard();
 
         }
 
-//        private void printCards(List<Card> cards){
-//        for (Card card: cards){
-//            System.out.println(card.getName());
-//        }
+        }
 
-    }
+}
 

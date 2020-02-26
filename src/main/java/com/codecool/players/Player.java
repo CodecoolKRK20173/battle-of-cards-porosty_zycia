@@ -10,30 +10,35 @@ public abstract class Player {
     private List<Card> deck = new ArrayList<>();
 
     public Player(String name) {
-        this.deck = deck;
         this.name = name;
     }
 
-    public void takeCard(Card card) {
+    public Card getTopCard() {
+        Card topCard = deck.get(0);
+        deck.remove(0);
 
-    }
-    public List<Card> getDeck(){
-        return this.deck;
+        return topCard;
     }
 
     public void addCardToDeck(Card card) {
         deck.add(card);
 
-
     }
 
-    public void printCards(List<Card> deck){
+    public void printCards(){
         for (Card card: deck){
             System.out.println(card.getName());
         }
 
     }
+
+    public boolean hasCards() {
+        if (deck.size() > 0) {
+            return true;
+        }
+        return false;
     }
+}
 
 
 
