@@ -9,10 +9,10 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
-            XmlPlayer xmlPlayer = new XmlPlayer();
-           xmlPlayer.parse();
 
 
+            PrintTable printTable = new PrintTable();
+            printTable.printTable();
 
 
 
