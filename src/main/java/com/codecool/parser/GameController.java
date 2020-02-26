@@ -2,6 +2,7 @@ package com.codecool.parser;
 
 import com.codecool.Card;
 import com.codecool.PrintTable;
+import com.codecool.UserGlobalInput;
 import com.codecool.players.Deck;
 import com.codecool.players.HumanPlayer;
 import com.codecool.players.Player;
@@ -9,27 +10,26 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 public class GameController {
 
+
     public void run() throws ParserConfigurationException, SAXException, IOException {
 
+        UserGlobalInput uInput = new UserGlobalInput();
         XmlPlayer xmlPlayer = new XmlPlayer();
         xmlPlayer.parse();
         HumanPlayer player1 = new HumanPlayer("Mike");
         HumanPlayer player2 = new HumanPlayer("Stan");
         Player activePlayer = player1;
         Player inActivePlayer = player2;
-
+        boolean isRunning = true;
 
         Deck deck = new Deck(xmlPlayer.getCards());
 
         deck.shuffleCards();
 
-        deck.printCards();
+
         for (int i=0; i < deck.getSize() ; i++) {
             if (i % 2 == 0) {
                 player1.addCardToDeck(deck.getCardByIndex(i));
@@ -37,21 +37,39 @@ public class GameController {
                 player2.addCardToDeck(deck.getCardByIndex(i));
             }
         }
-//        System.out.println("hand1");
-//        player1.printCards();
-//        System.out.println("hand2");
-//        player2.printCards();
 
-        while (player1.hasCards() && player2.hasCards()) {
-            Card activePlayerCard = activePlayer.getTopCard();
-            Card inActivePlayerCard = inActivePlayer.getTopCard();
-            PrintTable print = new PrintTable(activePlayerCard,inActivePlayerCard);
-            print.printTitle();
-            print.printTable(activePlayerCard, inActivePlayerCard);
 
+        while (player1.hasCards() && player2.hasCards() && isRunning) {
+
+            int menuOption = uInput.getIntInput(); // TODO: get option from user
+
+            switch (menuOption) {
+
+                case 1:
+                    Card activePlayerCard = activePlayer.getTopCard();
+                    Card inActivePlayerCard = inActivePlayer.getTopCard();
+                    PrintTable print = new PrintTable(activePlayerCard,inActivePlayerCard);
+                    print.printMenuOptions();
+                    print.printTitle();
+                    print.printTable(activePlayerCard, inActivePlayerCard);
+
+                    break;
+                case 2:
+                    break;
+
+                case 0:
+                    isRunning = false;
+                    break;
+                default:
+                    break;
+            }
         }
+        uInput.scannerClose();
+    }
 
-        }
+
+
+
 
 }
 

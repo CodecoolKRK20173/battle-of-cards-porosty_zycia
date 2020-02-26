@@ -1,9 +1,7 @@
 package com.codecool;
 
 import com.github.tomaslanger.chalk.Chalk;
-import org.xml.sax.SAXException;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
+
 
 public class PrintTable {
 
@@ -14,22 +12,47 @@ public class PrintTable {
 
     }
 
+    public void printMenuOptions() {
+        System.out.println("" +
+                "\n\n\n" +
+                "                                                   \n\n" +
+                "                                                                                    Please choose from one of the following options\n\n" +
+                "                                                                                                   (1) Start GAME\n" +
+                "         Where is Pioter ?                                                                         (2) Show Result\n" +
+                "                                                                                                   (0) Exit Game\n\n\n");
+    }
+
+    public void printGameMenuOptions() {
+        System.out.println("" +
+                "\n\n\n" +
+                "                                                   \n\n" +
+                "                                                                                    Please choose from one of the following options\n\n" +
+                "                                                                                                   (1) Play PACE\n" +
+                "         Where is Pioter ?                                                                         (2) Play SHOOTING\n" +
+                "                                                                                                   (3) Play Dribbling\n\n\n" +
+                "                                                                                                   (4) Play Defending\n\n\n" +
+                "                                                                                                   (0) Exit Game\n\n\n");
+    }
+
+
+
+
     public void printTitle() {
 
         System.out.println("\n" +
                 "                                      \n\n\n\n\n\n" +
-                "                                          ██████╗  █████╗ ████████╗████████╗██╗     ███████╗     ██████╗ ███████╗     ██████╗ █████╗ ██████╗ ██████╗ ███████╗\n" +
-                "                                          ██╔══██╗██╔══██╗╚══██╔══╝╚══██╔══╝██║     ██╔════╝    ██╔═══██╗██╔════╝    ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔════╝\n" +
-                "                                          ██████╔╝███████║   ██║      ██║   ██║     █████╗      ██║   ██║█████╗      ██║     ███████║██████╔╝██║  ██║███████╗\n" +
-                "                                          ██╔══██╗██╔══██║   ██║      ██║   ██║     ██╔══╝      ██║   ██║██╔══╝      ██║     ██╔══██║██╔══██╗██║  ██║╚════██║\n" +
-                "                                          ██████╔╝██║  ██║   ██║      ██║   ███████╗███████╗    ╚██████╔╝██║         ╚██████╗██║  ██║██║  ██║██████╔╝███████║\n" +
-                "                                          ╚═════╝ ╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝     ╚═════╝ ╚═╝          ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝\n" +
+                "                                                   ██████╗  █████╗ ████████╗████████╗██╗     ███████╗     ██████╗ ███████╗     ██████╗ █████╗ ██████╗ ██████╗ ███████╗\n" +
+                "                                                   ██╔══██╗██╔══██╗╚══██╔══╝╚══██╔══╝██║     ██╔════╝    ██╔═══██╗██╔════╝    ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔════╝\n" +
+                "                                                   ██████╔╝███████║   ██║      ██║   ██║     █████╗      ██║   ██║█████╗      ██║     ███████║██████╔╝██║  ██║███████╗\n" +
+                "                                                   ██╔══██╗██╔══██║   ██║      ██║   ██║     ██╔══╝      ██║   ██║██╔══╝      ██║     ██╔══██║██╔══██╗██║  ██║╚════██║\n" +
+                "                                                   ██████╔╝██║  ██║   ██║      ██║   ███████╗███████╗    ╚██████╔╝██║         ╚██████╗██║  ██║██║  ██║██████╔╝███████║\n" +
+                "                                                   ╚═════╝ ╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝     ╚═════╝ ╚═╝          ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝\n" +
                 "                                                                                                                                                             \n" +
                 "                                                                                                                                                               " +
                 "");
     }
 
-    public void printTable(Card activePlayerCard, Card inactivePlayerCard) throws ParserConfigurationException, SAXException, IOException {
+    public void printTable(Card activePlayerCard, Card inactivePlayerCard) {
 
         String format = "                                               |%-32s %2s| %-22s |%-32s %2s|";
 
@@ -39,21 +62,21 @@ public class PrintTable {
 
 
 
-        System.out.println("\n                                               |-----------------------------------|                                             |-----------------------------------|");
-        System.out.println("                                               |----------< PLAYER ONE >-----------|                                             |------------< PLAYER TWO >---------|");
-        System.out.println("                                               |-----------------------------------|                                             |-----------------------------------|");
-        System.out.printf(format, "Card Id: ", activePlayerCard.getId(), "-------------------------------------------", "Card Id: ", inactivePlayerCard.getId());
+        System.out.println("\n                                               |-----------------------------------|                                                |-----------------------------------|");
+        System.out.println("                                               |----------< PLAYER ONE >-----------|                                                |------------< PLAYER TWO >---------|");
+        System.out.println("                                               |-----------------------------------|                                                |-----------------------------------|");
+        System.out.printf(format, "Card Id: ", activePlayerCard.getId(), "----------------------------------------------", "Card Id: ", inactivePlayerCard.getId());
         System.out.println();
-        System.out.printf(format, Chalk.on(activePlayerCard.getName()).red(), "            ", "-------------------------------------------", Chalk.on(inactivePlayerCard.getName()).red(),"            ");
+        System.out.printf(format, Chalk.on(activePlayerCard.getName()).red(), "            ", "----------------------------------------------", Chalk.on(inactivePlayerCard.getName()).red(),"            ");
         System.out.println();
-        System.out.printf(format, "Pace:", activePlayerCard.getPace(), "-------------------------------------------", "Pace: ", inactivePlayerCard.getPace(),"");
+        System.out.printf(format, "Pace:", activePlayerCard.getPace(), "----------------------------------------------", "Pace: ", inactivePlayerCard.getPace(),"");
         System.out.println();
-        System.out.printf(format, "Shooting:", activePlayerCard.getShooting(), "-------------------------------------------", "Shooting", inactivePlayerCard.getShooting(),"");
+        System.out.printf(format, "Shooting:", activePlayerCard.getShooting(), "----------------------------------------------", "Shooting", inactivePlayerCard.getShooting(),"");
         System.out.println();
-        System.out.printf(format, "Dribbling:", activePlayerCard.getDribbling(), "-------------------------------------------", "Dribbling", inactivePlayerCard.getDribbling(),"");
+        System.out.printf(format, "Dribbling:", activePlayerCard.getDribbling(), "----------------------------------------------", "Dribbling", inactivePlayerCard.getDribbling(),"");
         System.out.println();
-        System.out.printf(format, "Defending:", activePlayerCard.getDefending(), "-------------------------------------------", "Defending", inactivePlayerCard.getDefending(),"");
-        System.out.println("\n                                               |-----------------------------------|                                             |-----------------------------------|");
+        System.out.printf(format, "Defending:", activePlayerCard.getDefending(), "----------------------------------------------", "Defending", inactivePlayerCard.getDefending(),"");
+        System.out.println("\n                                               |-----------------------------------|                                                |-----------------------------------|");
 
 
     }
