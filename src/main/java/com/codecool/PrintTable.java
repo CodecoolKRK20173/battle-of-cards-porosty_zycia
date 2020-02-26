@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PrintTable {
+//    Deck deck = new Deck();
 
     public PrintTable() {
 
@@ -63,11 +64,11 @@ public class PrintTable {
 //
 //
 //    }
-    public void printHands() throws IOException, SAXException, ParserConfigurationException {
-        Deck deck = new Deck();
-        //System.out.print(deck.getHand1().get(1).getName());
-        System.out.print("          ");
-       // System.out.print(deck.getHand1().get(0).getName());
-    }
+//    public void printHands() throws IOException, SAXException, ParserConfigurationException {
+//
+//        System.out.print(this.deck.getHand1().get(0).getName());
+//        System.out.print("          ");
+//        System.out.print(this.deck.getHand1().get(0).getName());
+//    }
 
 }
