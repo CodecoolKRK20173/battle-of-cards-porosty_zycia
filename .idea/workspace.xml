@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="838aedc3-5339-43bc-8078-ac070542ed5d" name="Default Changelist" comment="Add players parser 1" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="battle-of-cards-porosty_zycia" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1YISKwiZjlbxu1ZuJ3IvMD1XnkG" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.codecool.Main" />
+      <module name="battle-of-cards-porosty_zycia" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="838aedc3-5339-43bc-8078-ac070542ed5d" name="Default Changelist" comment="" />
+      <created>1582628554905</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582628554905</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Add players parser">
+      <created>1582634228340</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582634228340</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add players parser" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add players parser" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="94" y="48" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582628649023">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="94" y="48" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1582628649023" />
+    <state x="368" y="177" width="525" height="421" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1582628645548">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="368" y="177" width="525" height="421" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.760@0.0.1280.760" timestamp="1582628645548" />
+    <state x="488" y="271" width="293" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1582706274600">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="488" y="271" width="293" height="211" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1280.760@0.0.1280.760" timestamp="1582706274600" />
+    <state x="223" y="0" width="823" height="755" key="CommitChangelistDialog2" timestamp="1582705733481">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="223" y="0" width="823" height="755" key="CommitChangelistDialog2/0.0.1280.760@0.0.1280.760" timestamp="1582705733481" />
+    <state width="1238" height="184" key="GridCell.Tab.0.bottom" timestamp="1582635380605">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="184" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1582635380605" />
+    <state width="1238" height="184" key="GridCell.Tab.0.center" timestamp="1582635380604">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="184" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1582635380604" />
+    <state width="1238" height="184" key="GridCell.Tab.0.left" timestamp="1582635380604">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="184" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1582635380604" />
+    <state width="1238" height="184" key="GridCell.Tab.0.right" timestamp="1582635380604">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state width="1238" height="184" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1582635380604" />
+    <state x="144" y="14" key="SettingsEditor" timestamp="1582705955276">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="144" y="14" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1582705955276" />
+    <state x="319" y="217" key="com.intellij.ide.util.TipDialog" timestamp="1582706172992">
+      <screen x="0" y="0" width="1280" height="760" />
+    </state>
+    <state x="319" y="217" key="com.intellij.ide.util.TipDialog/0.0.1280.760@0.0.1280.760" timestamp="1582706172992" />
+  </component>
+</project>
