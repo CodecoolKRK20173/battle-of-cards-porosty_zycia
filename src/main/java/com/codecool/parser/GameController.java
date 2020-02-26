@@ -1,6 +1,7 @@
 package com.codecool.parser;
 
 import com.codecool.Card;
+import com.codecool.PrintTable;
 import com.codecool.players.Deck;
 import com.codecool.players.HumanPlayer;
 import com.codecool.players.Player;
@@ -36,14 +37,17 @@ public class GameController {
                 player2.addCardToDeck(deck.getCardByIndex(i));
             }
         }
-        System.out.println("hand1");
-        player1.printCards();
-        System.out.println("hand2");
-        player2.printCards();
+//        System.out.println("hand1");
+//        player1.printCards();
+//        System.out.println("hand2");
+//        player2.printCards();
 
         while (player1.hasCards() && player2.hasCards()) {
             Card activePlayerCard = activePlayer.getTopCard();
             Card inActivePlayerCard = inActivePlayer.getTopCard();
+            PrintTable print = new PrintTable(activePlayerCard,inActivePlayerCard);
+            print.printTitle();
+            print.printTable(activePlayerCard, inActivePlayerCard);
 
         }
 

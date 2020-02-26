@@ -1,23 +1,16 @@
 package com.codecool;
 
-
-import com.codecool.parser.XmlPlayer;
-
 import com.github.tomaslanger.chalk.Chalk;
-
-
-
 import org.xml.sax.SAXException;
-
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class PrintTable {
-//    Deck deck = new Deck();
 
-    public PrintTable() {
+    private Card activePlayerCard;
+    private Card inactivePlayerCard;
+
+    public PrintTable(Card activePlayerCard, Card inactivePlayerCard) {
 
     }
 
@@ -36,15 +29,9 @@ public class PrintTable {
                 "");
     }
 
-    public void printTable() throws ParserConfigurationException, SAXException, IOException {
-        XmlPlayer xmlPlayer = new XmlPlayer();
-        xmlPlayer.parse();
-        xmlPlayer.getCards();
+    public void printTable(Card activePlayerCard, Card inactivePlayerCard) throws ParserConfigurationException, SAXException, IOException {
 
-        int player1 = 15;
-        int player2 = 22;
-
-        String format = "                                               |%-22s %2s| %-22s |%-22s %2s|";
+        String format = "                                               |%-30s %2s| %-22s |%-30s %2s|";
 
 
 
@@ -53,17 +40,17 @@ public class PrintTable {
 
 
         System.out.println("\n                                               |-------------------------|                                             |-------------------------|");
-        System.out.printf(format, "Card Id: ", xmlPlayer.getCards().get(player1).getId(), "-------------------------------------------", "Card Id: ", xmlPlayer.getCards().get(player2).getId());
+        System.out.printf(format, "Card Id: ", activePlayerCard.getId(), "-------------------------------------------", "Card Id: ", inactivePlayerCard.getId());
         System.out.println();
-        System.out.printf(format, Chalk.on(xmlPlayer.getCards().get(player1).getName()).red(), "            ", "-------------------------------------------", Chalk.on(xmlPlayer.getCards().get(player2).getName()).red(),"      ");
+        System.out.printf(format, Chalk.on(activePlayerCard.getName()).red(), "            ", "-------------------------------------------", Chalk.on(inactivePlayerCard.getName()).red(),"      ");
         System.out.println();
-        System.out.printf(format, "Pace:", xmlPlayer.getCards().get(player1).getPace(), "-------------------------------------------", "Pace: ", xmlPlayer.getCards().get(player2).getPace(),"");
+        System.out.printf(format, "Pace:", activePlayerCard.getPace(), "-------------------------------------------", "Pace: ", inactivePlayerCard.getPace(),"");
         System.out.println();
-        System.out.printf(format, "Shooting:", xmlPlayer.getCards().get(player1).getShooting(), "-------------------------------------------", "Shooting", xmlPlayer.getCards().get(player2).getPace(),"");
+        System.out.printf(format, "Shooting:", activePlayerCard.getShooting(), "-------------------------------------------", "Shooting", inactivePlayerCard.getShooting(),"");
         System.out.println();
-        System.out.printf(format, "Dribbling:", xmlPlayer.getCards().get(player1).getDribbling(), "-------------------------------------------", "Dribbling", xmlPlayer.getCards().get(player2).getDribbling(),"");
+        System.out.printf(format, "Dribbling:", activePlayerCard.getDribbling(), "-------------------------------------------", "Dribbling", inactivePlayerCard.getDribbling(),"");
         System.out.println();
-        System.out.printf(format, "Defending:", xmlPlayer.getCards().get(player1).getDefending(), "-------------------------------------------", "Defending", xmlPlayer.getCards().get(player2).getDefending(),"");
+        System.out.printf(format, "Defending:", activePlayerCard.getDefending(), "-------------------------------------------", "Defending", inactivePlayerCard.getDefending(),"");
         System.out.println("\n                                               |-------------------------|                                             |-------------------------|");
 
 

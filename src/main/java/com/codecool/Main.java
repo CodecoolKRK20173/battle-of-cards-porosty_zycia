@@ -15,23 +15,6 @@ public class Main {
         GameController game = new GameController();
         game.run();
 
-<<<<<<< HEAD
-            PrintTable printTable = new PrintTable();
-            printTable.printTitle();
-=======
-            /*PrintTable printTable = new PrintTable();
->>>>>>> shuffle
-            printTable.printTable();
 
-        Deck deck = new Deck();
-        deck.shuffleCards();
-        printTable.printHands();*/
-
-
-            //ESProvider esProvider = new ESProvider(ruleParser,  factParser);
-            //esProvider.collectAnswers();
-
-          //  ArrayList<Player> facts = factParser
-	// write your code here
     }
 }

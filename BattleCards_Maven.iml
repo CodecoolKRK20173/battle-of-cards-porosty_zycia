@@ -17,5 +17,6 @@
     <orderEntry type="library" name="Maven: org.fusesource.jansi:jansi-native:1.5" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.fusesource.jansi:jansi-native:windows32:1.5" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.fusesource.jansi:jansi-native:windows64:1.5" level="project" />
+    <orderEntry type="library" name="Maven: com.jakewharton.fliptables:chalk:1.0.2" level="project" />
   </component>
 </module>
