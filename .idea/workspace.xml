@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a42045c0-b7e5-4e20-aec0-272eef553658" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BattleCards/src/com/codecool/Card.java" afterDir="false" />
+    <list default="true" id="92f5378d-1aac-4905-bd8f-bcc58af4485b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +24,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1YITtQt7r1GvfncjCUqL24RC7as" />
+  <component name="ProjectId" id="1YImCK5Wp3MhrZRN6TaIbiWMaiG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -32,41 +32,42 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="ignore_missing_gitignore" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-  </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.codecool.Main" />
-      <module name="battle-of-cards-porosty_zycia" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a42045c0-b7e5-4e20-aec0-272eef553658" name="Default Changelist" comment="" />
-      <created>1582629322845</created>
+      <changelist id="92f5378d-1aac-4905-bd8f-bcc58af4485b" name="Default Changelist" comment="" />
+      <created>1582638354624</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1582629322845</updated>
+      <updated>1582638354624</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="246" y="61" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582629397587">
+    <state x="542" y="106" width="424" height="574" key="FileChooserDialogImpl" timestamp="1582706910408">
       <screen x="56" y="27" width="1310" height="741" />
     </state>
-    <state x="246" y="61" key="#com.intellij.execution.impl.EditConfigurationsDialog/56.27.1310.741@56.27.1310.741" timestamp="1582629397587" />
-    <state x="56" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1582633339629">
+    <state x="542" y="106" width="424" height="574" key="FileChooserDialogImpl/56.27.1310.741@56.27.1310.741" timestamp="1582706910408" />
+    <state x="296" y="52" width="819" height="698" key="NewModule_or_Project.wizard" timestamp="1582706917303">
       <screen x="56" y="27" width="1310" height="741" />
     </state>
-    <state x="56" y="31" width="1022" height="737" key="SettingsEditor/56.27.1310.741@56.27.1310.741" timestamp="1582633339629" />
+    <state x="296" y="52" width="819" height="698" key="NewModule_or_Project.wizard/56.27.1310.741@56.27.1310.741" timestamp="1582706917303" />
+    <state x="200" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1582705108921">
+      <screen x="56" y="27" width="1310" height="741" />
+    </state>
+    <state x="200" y="31" width="1022" height="737" key="SettingsEditor/56.27.1310.741@56.27.1310.741" timestamp="1582705108921" />
+    <state x="367" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1582704465740">
+      <screen x="56" y="27" width="1310" height="741" />
+    </state>
+    <state x="367" y="225" key="com.intellij.ide.util.TipDialog/56.27.1310.741@56.27.1310.741" timestamp="1582704465740" />
+    <state x="56" y="27" width="1300" height="741" key="new project wizard" timestamp="1582639375136">
+      <screen x="56" y="27" width="1310" height="741" />
+    </state>
+    <state x="56" y="27" width="1300" height="741" key="new project wizard/56.27.1310.741@56.27.1310.741" timestamp="1582639375136" />
   </component>
 </project>
