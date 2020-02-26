@@ -1,6 +1,8 @@
 package com.codecool;
 
+import com.codecool.parser.GameController;
 import com.codecool.parser.XmlPlayer;
+import com.codecool.players.Deck;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -10,11 +12,20 @@ public class Main {
 
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 
+        GameController game = new GameController();
+        game.run();
 
+<<<<<<< HEAD
             PrintTable printTable = new PrintTable();
             printTable.printTitle();
+=======
+            /*PrintTable printTable = new PrintTable();
+>>>>>>> shuffle
             printTable.printTable();
 
+        Deck deck = new Deck();
+        deck.shuffleCards();
+        printTable.printHands();*/
 
 
             //ESProvider esProvider = new ESProvider(ruleParser,  factParser);

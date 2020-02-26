@@ -1,8 +1,12 @@
 package com.codecool;
 
-import com.codecool.*;
+
 import com.codecool.parser.XmlPlayer;
+
 import com.github.tomaslanger.chalk.Chalk;
+
+
+
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -11,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PrintTable {
+//    Deck deck = new Deck();
 
     public PrintTable() {
 
