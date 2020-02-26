@@ -10,8 +10,8 @@ public class Controller {
 
     public Controller(){
         this.deck = new Deck();
-
     }
+
     public void menu() {
         System.out.println("Choose an option: \n1.Start Game \n2.Quit game");
         Scanner scan = new Scanner(System.in);
