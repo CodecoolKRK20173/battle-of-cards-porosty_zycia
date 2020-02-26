@@ -2,6 +2,7 @@ package com.codecool;
 
 import com.codecool.*;
 import com.codecool.parser.XmlPlayer;
+import com.codecool.players.Deck;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -62,5 +63,11 @@ public class PrintTable {
 //
 //
 //    }
+    public void printHands() throws IOException, SAXException, ParserConfigurationException {
+        Deck deck = new Deck();
+        //System.out.print(deck.getHand1().get(1).getName());
+        System.out.print("          ");
+       // System.out.print(deck.getHand1().get(0).getName());
+    }
 
 }

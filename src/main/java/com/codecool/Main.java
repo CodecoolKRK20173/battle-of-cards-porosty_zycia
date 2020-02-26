@@ -1,6 +1,7 @@
 package com.codecool;
 
 import com.codecool.parser.XmlPlayer;
+import com.codecool.players.Deck;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -14,6 +15,9 @@ public class Main {
             PrintTable printTable = new PrintTable();
             printTable.printTable();
 
+        Deck deck = new Deck();
+        deck.shuffleCards();
+        printTable.printHands();
 
 
             //ESProvider esProvider = new ESProvider(ruleParser,  factParser);
