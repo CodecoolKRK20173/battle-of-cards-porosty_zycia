@@ -12,6 +12,7 @@ public class Main {
 
 
             PrintTable printTable = new PrintTable();
+            printTable.printTitle();
             printTable.printTable();
 
 
