@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/battle-of-cards-porosty_zycia.iml" filepath="$PROJECT_DIR$/.idea/battle-of-cards-porosty_zycia.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/battle-of-cards-porosty_zycia.iml" filepath="$PROJECT_DIR$/battle-of-cards-porosty_zycia.iml" />
+>>>>>>> d6d8b4d2e10c08be4e742fa8cfd725059f0ff934
     </modules>
   </component>
 </project>

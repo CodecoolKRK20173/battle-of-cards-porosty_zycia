@@ -1,4 +1,4 @@
-package players;
+package com.codecool.players;
 
 public class AIPlayer extends Player {
 

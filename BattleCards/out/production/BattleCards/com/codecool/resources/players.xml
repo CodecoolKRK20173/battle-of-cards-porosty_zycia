@@ -1,0 +1,235 @@
+<?xml version = "1.0"?>
+<class>
+    <player id="1">
+        <name>Robert lewandowski</name>
+        <pace>90</pace>
+        <shooting>99</shooting>
+        <passing>85</passing>
+        <dribling>85</dribling>
+        <phisicality>85</phisicality>
+        <defending>85</defending>
+    </player>
+    <player id="2">
+        <name>Diego Maradona</name>
+        <pace>97</pace>
+        <shooting>96</shooting>
+        <passing>94</passing>
+        <dribling>99</dribling>
+        <phisicality>80</phisicality>
+        <defending>42</defending>
+    </player>
+    <player id="3">
+        <name>Pele</name>
+        <pace>97</pace>
+        <shooting>98</shooting>
+        <passing>95</passing>
+        <dribling>98</dribling>
+        <phisicality>82</phisicality>
+        <defending>62</defending>
+    </player>
+
+    <player id="4">
+        <name>David Beckham</name>
+        <pace>93</pace>
+        <shooting>89</shooting>
+        <dribling>98</dribling>
+        <defending>67</defending>
+    </player>
+
+    <player id="5">
+        <name>Paweł Brożek</name>
+        <pace>100</pace>
+        <shooting>100</shooting>
+        <dribling>100</dribling>
+        <defending>100</defending>
+    </player>
+    <player id="6">
+        <name>Christiano Ronaldo</name>
+        <pace>87</pace>
+        <shooting>90</shooting>
+        <dribling>87</dribling>
+        <defending>56</defending>
+    </player>
+    <player id="7">
+        <name>Lionel Messi</name>
+        <pace>89</pace>
+        <shooting>76</shooting>
+        <dribling>87</dribling>
+        <defending>54</defending>
+    </player>
+    <player id="8">
+        <name>Roman Kosecki</name>
+        <pace>77</pace>
+        <shooting>67</shooting>
+        <dribling>87</dribling>
+        <defending>90</defending>
+    </player>
+    <player id="9">
+        <name>Emanuel Olisadebe</name>
+        <pace>89</pace>
+        <shooting>69</shooting>
+        <dribling>77</dribling>
+        <defending>34</defending>
+    </player>
+    <player id="10">
+        <name>Jacek Krzynówek</name>
+        <pace>65</pace>
+        <shooting>72</shooting>
+        <dribling>82</dribling>
+        <defending>76</defending>
+    </player>
+    <player id="11">
+        <name>Radosław Majdan</name>
+        <pace>82</pace>
+        <shooting>34</shooting>
+        <dribling>56</dribling>
+        <defending>99</defending>
+    </player>
+    <player id="12">
+        <name>Piotr Świerczewski</name>
+        <pace>77</pace>
+        <shooting>81</shooting>
+        <dribling>50</dribling>
+        <defending>32</defending>
+    </player>
+    <player id="13">
+        <name>Tomasz Hajto</name>
+        <pace>44</pace>
+        <shooting>44</shooting>
+        <dribling>44</dribling>
+        <defending>44</defending>
+    </player>
+    <player id="14">
+        <name>Artur Boruc</name>
+        <pace>25</pace>
+        <shooting>35</shooting>
+        <dribling>41</dribling>
+        <defending>97</defending>
+    </player>
+    <player id="15">
+        <name>Zinede Zidane</name>
+        <pace>76</pace>
+        <shooting>88</shooting>
+        <dribling>56</dribling>
+        <defending>90</defending>
+    </player>
+    <player id="16">
+        <name>Eric Cantona</name>
+        <pace>87</pace>
+        <shooting>99</shooting>
+        <dribling>61</dribling>
+        <defending>34</defending>
+    </player>
+    <player id="17">
+        <name>Ole Gunjar Solkasjear</name>
+        <pace>87</pace>
+        <shooting>99</shooting>
+        <dribling>87</dribling>
+        <defending>23</defending>
+    </player>
+    <player id="18">
+        <name>Wayne Rooney</name>
+        <pace>92</pace>
+        <shooting>97</shooting>
+        <dribling>93</dribling>
+        <defending>67</defending>
+    </player>
+    <player id="19">
+        <name>Jerzy Dudek</name>
+        <pace>77</pace>
+        <shooting>55</shooting>
+        <dribling>66</dribling>
+        <defending>88</defending>
+    </player>
+    <player id="20">
+        <name>Grzegorz Lato</name>
+        <pace>99</pace>
+        <shooting>99</shooting>
+        <dribling>99</dribling>
+        <defending>11</defending>
+    </player>
+    <player id="21">
+        <name>Zbigniew Boniek</name>
+        <pace>98</pace>
+        <shooting>97</shooting>
+        <dribling>96</dribling>
+        <defending>39</defending>
+    </player>
+    <player id="22">
+        <name>Marek Citko</name>
+        <pace>76</pace>
+        <shooting>89</shooting>
+        <dribling>90</dribling>
+        <defending>65</defending>
+    </player>
+    <player id="23">
+        <name>Wojciech Kowalczyk</name>
+        <pace>45</pace>
+        <shooting>68</shooting>
+        <dribling>91</dribling>
+        <defending>21</defending>
+    </player>
+    <player id="24">
+        <name>Jacek Bąk</name>
+        <pace>45</pace>
+        <shooting>38</shooting>
+        <dribling>76</dribling>
+        <defending>97</defending>
+    </player>
+    <player id="25">
+        <name>Michał Pazdan</name>
+        <pace>76</pace>
+        <shooting>71</shooting>
+        <dribling>72</dribling>
+        <defending>90</defending>
+    </player>
+    <player id="26">
+        <name>Paul Gascoigne</name>
+        <pace>81</pace>
+        <shooting>90</shooting>
+        <dribling>94</dribling>
+        <defending>45</defending>
+    </player>
+    <player id="27">
+        <name>Kazimierz Kmiecik</name>
+        <pace>89</pace>
+        <shooting>99</shooting>
+        <dribling>79</dribling>
+        <defending>61</defending>
+    </player>
+    <player id="28">
+        <name>Kamil Grosicki</name>
+        <pace>99</pace>
+        <shooting>76</shooting>
+        <dribling>56</dribling>
+        <defending>12</defending>
+    </player>
+    <player id="29">
+        <name>Andrzej Iwan</name>
+        <pace>98</pace>
+        <shooting>91</shooting>
+        <dribling>87</dribling>
+        <defending>55</defending>
+    </player>
+    <player id="30">
+        <name>Arkadiusz Milik</name>
+        <pace>90</pace>
+        <shooting>45</shooting>
+        <dribling>84</dribling>
+        <defending>21</defending>
+    </player>
+    <player id="31">
+        <name>Andrzej Juskowial</name>
+        <pace>78</pace>
+        <shooting>88</shooting>
+        <dribling>66</dribling>
+        <defending>22</defending>
+    </player>
+    <player id="32">
+        <name>Maor Melikson</name>
+        <pace>99</pace>
+        <shooting>90</shooting>
+        <dribling>98</dribling>
+        <defending>55</defending>
+    </player>
+</class>

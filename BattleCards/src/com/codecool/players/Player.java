@@ -1,4 +1,4 @@
-package players;
+package com.codecool.players;
 
 public abstract class Player {
     private String name;
