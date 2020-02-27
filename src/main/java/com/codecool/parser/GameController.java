@@ -1,7 +1,10 @@
 package com.codecool.parser;
 
 import com.codecool.Card;
+import com.codecool.comparator.ComparatorDefence;
 import com.codecool.comparator.ComparatorDribling;
+import com.codecool.comparator.ComparatorPace;
+import com.codecool.comparator.ComparatorShooting;
 import com.codecool.players.Deck;
 import com.codecool.players.HumanPlayer;
 import com.codecool.players.Player;
@@ -24,6 +27,9 @@ public class GameController {
         Player activePlayer = player1;
         Player inActivePlayer = player2;
         ComparatorDribling comparatorDribling = new ComparatorDribling();
+        ComparatorPace comparatorPace = new ComparatorPace();
+        ComparatorShooting comparatorShooting = new ComparatorShooting();
+        ComparatorDefence comparatorDefence = new ComparatorDefence();
 
 
 
@@ -51,11 +57,17 @@ public class GameController {
         System.out.println("hand2");
         player2.printCards();
 
+        Card topCard = activePlayer.getTopCard();
+        Card topCard1 = inActivePlayer.getTopCard();
 
-        System.out.println(activePlayer.getTopCard().getName() + "    " + inActivePlayer.getTopCard().getName());
-        System.out.println(activePlayer.getTopCard().getDribbling() + "                          " + inActivePlayer.getTopCard().getDribbling());
+        System.out.println(topCard.getName() + "    " + topCard1.getName());
+        System.out.println(topCard.getDribbling() + "                          " + topCard1.getDribbling());
 
-        System.out.println(comparatorDribling.compare(activePlayer,inActivePlayer));
+        System.out.println("Dribling : " + comparatorDribling.compare(topCard , topCard1));
+        System.out.println("Pace : " + comparatorPace.compare(topCard , topCard1));
+        System.out.println("Shooting : " + comparatorShooting.compare(topCard , topCard1));
+        System.out.println("Defence : " + comparatorDefence.compare(topCard , topCard1));
+
 
         while (player1.hasCards() && player2.hasCards()) {
 
