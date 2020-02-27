@@ -86,6 +86,10 @@ public class GameController {
     private XmlCard xmlCard;
     XmlCard xmlPlayer = new XmlCard();
     Deck deck;
+    ComparatorShooting shooting = new ComparatorShooting();
+    ComparatorDribling dribbling = new ComparatorDribling();
+    ComparatorPace pace = new ComparatorPace();
+    ComparatorDefence defence = new ComparatorDefence();
 
     public GameController(XmlCard xmlCard) {
         this.xmlCard = xmlCard;
@@ -134,8 +138,12 @@ public class GameController {
         Card activePlayerCard = player1.getTopCard();
         Card inActivePlayerCard = player2.getTopCard();
 
+
         PrintTable print = new PrintTable(activePlayerCard, inActivePlayerCard);
         print.printTableActivePlayer(activePlayerCard, player1);
+        int choose = 1;
+        shooting.compare(activePlayerCard, inActivePlayerCard);
+        print.printTable(activePlayerCard, inActivePlayerCard, player1, player2, choose);
 
     }
 
