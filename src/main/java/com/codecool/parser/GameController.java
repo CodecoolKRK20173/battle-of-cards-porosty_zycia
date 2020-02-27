@@ -60,7 +60,7 @@ public class GameController {
 
                     print.printMenuOptions();
                     print.printTitle();
-                    print.printTable(activePlayerCard, inActivePlayerCard);
+                    print.printTable(activePlayerCard, inActivePlayerCard, activePlayer, inActivePlayer);
 
                     //TODO move cards
 
