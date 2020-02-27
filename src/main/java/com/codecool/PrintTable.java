@@ -87,7 +87,7 @@ public class PrintTable {
     }
     public void printTableActivePlayer(Card activePlayerCard, Player activePlayer) {
 
-        String format = "                                               |%-40s %2s| %-22s ";
+        String format = "                                               |%-32s %-2s|";
 
 
 
@@ -96,11 +96,11 @@ public class PrintTable {
 
 
         System.out.println("\n                                               |-----------------------------------|");
-        System.out.println("                                               |----------<" + activePlayer.getName() + ">-----------|");
-        System.out.println("                                               |-----------------------------------|");
-        System.out.printf(format, "Card Id: ", activePlayerCard.getId(), "", "", "");
+        System.out.printf(format, "Player name: < " + activePlayer.getName(), "", "", "", "");
+        System.out.println("\n                                               |-----------------------------------|");
+        System.out.printf(format, "Card Id: ", activePlayerCard.getId(), "", "", "", "");
         System.out.println();
-        System.out.printf(format, Chalk.on(activePlayerCard.getName()).red(), "", "", "", "");
+        System.out.printf(format, Chalk.on(activePlayerCard.getName()).red(), "            ", "", "", "");
         System.out.println();
         System.out.printf(format, "Pace:", activePlayerCard.getPace(), "", "", "", "");
         System.out.println();

@@ -11,7 +11,7 @@ public class UserGlobalInput {
     }
 
     public String getStringInput() {
-        return scanner.next();
+        return scanner.nextLine();
     }
 
     public int getIntInput() {

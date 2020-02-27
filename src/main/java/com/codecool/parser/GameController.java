@@ -6,6 +6,7 @@ import com.codecool.UserGlobalInput;
 import com.codecool.players.Deck;
 import com.codecool.players.HumanPlayer;
 import com.codecool.players.Player;
+import com.codecool.players.PlayerController;
 import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
@@ -46,6 +47,8 @@ public class GameController {
             switch (menuOption) {
 
                 case 1:
+//                    PlayerController playerController = new PlayerController();
+//                    playerController.playGame();
                     Card activePlayerCard = activePlayer.getTopCard();
                     Card inActivePlayerCard = inActivePlayer.getTopCard();
 
@@ -57,7 +60,7 @@ public class GameController {
 
                     print.printMenuOptions();
                     print.printTitle();
-//                    print.printTable(activePlayerCard, inActivePlayerCard);
+                    print.printTable(activePlayerCard, inActivePlayerCard);
 
                     //TODO move cards
 
