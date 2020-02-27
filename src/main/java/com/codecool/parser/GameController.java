@@ -7,6 +7,7 @@ import com.codecool.comparator.ComparatorDefence;
 import com.codecool.comparator.ComparatorDribling;
 import com.codecool.comparator.ComparatorPace;
 import com.codecool.comparator.ComparatorShooting;
+import com.codecool.players.AIPlayer;
 import com.codecool.players.Deck;
 import com.codecool.players.HumanPlayer;
 import com.codecool.players.Player;
@@ -99,7 +100,7 @@ public class GameController {
 
         printTable.printTitle();
 
-        System.out.println("Choose an option: \n1.Start Game (PvP) \n2.Quit game");
+        System.out.println("Choose an option: \n1.Start Game (PvP) \n2. Start Game (PvC) \n3.Quit game");
         Scanner scan = new Scanner(System.in);
 
         //        while (player1.hasCards() && player2.hasCards() && isRunning) {
@@ -114,16 +115,96 @@ public class GameController {
                     createPlayers();
                 }
                 run();
+
             case "2":
+
+
+                    System.out.println("Player"  + " Please input your name: ");
+                    createPlayers();
+                    createAIPlayers();
+
+
+
+                runAI();
+
+            case "3":
                 break;
         }
         scan.close();
+    }
+
+    public void runAI() throws ParserConfigurationException, SAXException, IOException {
+        xmlPlayer.parse();
+        deck.shuffleCards();
+        deck.printCards();
+
+
+        Player player1 = deck.getPlayers().get(0);
+        AIPlayer aiPlayer = (AIPlayer) deck.getPlayers().get(1);
+
+
+
+        for (int i = 0; i < deck.getSize(); i++) {
+            if (i % 2 == 0) {
+                player1.addCardToDeck(deck.getCardByIndex(i));
+            } else {
+                aiPlayer.addCardToDeck(deck.getCardByIndex(i));
+            }
+        }
+
+        System.out.println(player1.getDeckSize());
+        System.out.println(aiPlayer.getDeckSize());
+        boolean active = true;
+        Card activePlayerCard = player1.getTopCard();
+        Card inActivePlayerCard = aiPlayer.getTopCard();
+
+        while (player1.hasCards() && aiPlayer.hasCards() && isRunning) {
+
+            if (active == true) {
+                activePlayerCard = player1.getTopCard();
+                inActivePlayerCard = aiPlayer.getTopCard();
+            }else{
+                inActivePlayerCard = player1.getTopCard();
+                activePlayerCard = aiPlayer.getTopCard();
+            }
+            System.out.println(player1.getDeckSize());
+            System.out.println(aiPlayer.getDeckSize());
+            System.out.println(active);
+
+            PrintTable print = new PrintTable(activePlayerCard, inActivePlayerCard);
+            if (active == true) {
+                print.printTableActivePlayer(activePlayerCard, player1);
+            }else{
+                print.printTableActivePlayer(activePlayerCard, aiPlayer);
+            }
+            int result = chooseComparator(activePlayerCard, inActivePlayerCard);
+
+            switch (result) {
+                case 0:
+                    player1.addCardToDeck(activePlayerCard);
+                    aiPlayer.addCardToDeck(inActivePlayerCard);
+                case 1:
+                    player1.addCardToDeck(activePlayerCard);
+                    player1.addCardToDeck(inActivePlayerCard);
+                case 2:
+                    aiPlayer.addCardToDeck(activePlayerCard);
+                    aiPlayer.addCardToDeck(inActivePlayerCard);
+                    if (active == true) {
+                        active = false;
+                    }else{
+                        active=true;
+                    }
+
+            }
+            print.printTable(activePlayerCard, inActivePlayerCard, player1, aiPlayer);
+        }
     }
 
     public void run() throws ParserConfigurationException, SAXException, IOException {
         xmlPlayer.parse();
         deck.shuffleCards();
         deck.printCards();
+
 
         Player player1 = deck.getPlayers().get(0);
         Player player2 = deck.getPlayers().get(1);
@@ -196,8 +277,14 @@ public class GameController {
         String textInput = scan.nextLine();
         HumanPlayer player = new HumanPlayer(textInput);
         deck.addPlayers(player);
-
     }
+
+    public void createAIPlayers(){
+        AIPlayer aiPlayer = new AIPlayer("Computer");
+        deck.addPlayers(aiPlayer);
+    }
+
+
     public int chooseComparator(Card activePlayerCard, Card inActivePlayerCard){
         ComparatorPace comparatorPace = new ComparatorPace();
         ComparatorShooting comparatorShooting = new ComparatorShooting();
