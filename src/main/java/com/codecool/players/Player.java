@@ -63,8 +63,8 @@ public abstract class Player {
         this.name = name;
     }
 
-    public Player() {
-        getTopCard();
+    public List<Card> getDeck() {
+        return deck;
     }
 
     public Card getTopCard() {
@@ -73,14 +73,15 @@ public abstract class Player {
         return topCard;
     }
 
+    public Card removeCard(Card card) {
+    return deck.remove(0);
+}
+
+    public int getDeckSize() {
+        return deck.size();
+    }
     public void addCardToDeck(Card card) {
         deck.add(card);
-    }
-
-    public void printCards() {
-        for (Card card : deck) {
-            System.out.println(card.getName());
-        }
     }
 
     public boolean hasCards() {

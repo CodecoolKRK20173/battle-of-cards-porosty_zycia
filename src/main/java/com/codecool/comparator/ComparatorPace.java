@@ -8,10 +8,10 @@ import java.util.Comparator;
 public class ComparatorPace implements Comparator<Card> {
 
     @Override
-    public int compare(Card cardActiv, Card cardInActiv) {
-        if (cardActiv.getPace() == cardInActiv.getPace()) {
+    public int compare(Card cardActive, Card cardInActive) {
+        if (cardActive.getPace() == cardInActive.getPace()) {
             return 0;
-        } else if (cardActiv.getPace() > cardInActiv.getPace()) {
+        } else if (cardActive.getPace() > cardInActive.getPace()) {
             return 1;
         } else {
             return 2;

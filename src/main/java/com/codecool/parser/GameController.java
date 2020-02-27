@@ -16,83 +16,12 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.util.Scanner;
 
-//public class GameController {
-//
-//
-//    public void run() throws ParserConfigurationException, SAXException, IOException {
-//
-//        UserGlobalInput uInput = new UserGlobalInput();
-//        XmlPlayer xmlPlayer = new XmlPlayer();
-//        xmlPlayer.parse();
-//        HumanPlayer player1 = new HumanPlayer("Mike");
-//        HumanPlayer player2 = new HumanPlayer("Stan");
-//        Player activePlayer = player1;
-//        Player inActivePlayer = player2;
-//        boolean isRunning = true;
-//
-//        Deck deck = new Deck(xmlPlayer.getCards());
-//
-//        deck.shuffleCards();
-//
-//
-//        for (int i=0; i < deck.getSize() ; i++) {
-//            if (i % 2 == 0) {
-//                player1.addCardToDeck(deck.getCardByIndex(i));
-//            }else{
-//                player2.addCardToDeck(deck.getCardByIndex(i));
-//            }
-//        }
-//
-//
-//        while (player1.hasCards() && player2.hasCards() && isRunning) {
-//
-//            int menuOption = uInput.getIntInput(); // TODO: get option from user
-//
-//            switch (menuOption) {
-//
-//                case 1:
-//                    Card activePlayerCard = activePlayer.getTopCard();
-//                    Card inActivePlayerCard = inActivePlayer.getTopCard();
-//
-//                    //TODO show active player card - choose characteristic to play - (compare)
-//
-//                    PrintTable print = new PrintTable(activePlayerCard,inActivePlayerCard);
-//                    print.printTableActivePlayer(activePlayerCard, activePlayer);
-//
-//
-//                    print.printMenuOptions();
-//                    print.printTitle();
-////                    print.printTable(activePlayerCard, inActivePlayerCard);
-//
-//                    //TODO move cards
-//
-//                    break;
-//                case 2:
-//                    break;
-//
-//                case 0:
-//                    isRunning = false;
-//                    break;
-//                default:
-//                    break;
-//            }
-//        }
-//        uInput.scannerClose();
-//    }
-
-//}
-
 public class GameController {
-    private XmlCard xmlCard;
     XmlCard xmlPlayer = new XmlCard();
     Deck deck;
-    ComparatorShooting shooting = new ComparatorShooting();
-    ComparatorDribling dribbling = new ComparatorDribling();
-    ComparatorPace pace = new ComparatorPace();
-    ComparatorDefence defence = new ComparatorDefence();
+    boolean isRunning = true;
 
     public GameController(XmlCard xmlCard) {
-        this.xmlCard = xmlCard;
         deck = new Deck(xmlCard.getCards());
     }
 
@@ -102,30 +31,32 @@ public class GameController {
 
         printTable.printTitle();
 
-        System.out.println("Choose an option: \n1.Start Game (PvP) \n2.Quit game");
+        System.out.println("                                                                       Choose an option: " +
+                           "\n                                                                                           1.Start Game (PvP) " +
+                           "\n                                                                                           2.Quit game");
         Scanner scan = new Scanner(System.in);
+
         String textInput = scan.nextLine();
 
         switch (textInput) {
             case "1":
                 int count = 2;
                 for (int i = 0; i < count; i++) {
-                    System.out.println("Player" + (i + 1) + " Please input your name: ");
+                    System.out.print("                                                          Player" + (i + 1) + " Please input your name: ");
                     createPlayers();
                 }
                 run();
             case "2":
                 break;
         }
+        scan.close();
     }
 
     public void run() throws ParserConfigurationException, SAXException, IOException {
         xmlPlayer.parse();
         deck.shuffleCards();
-        deck.printCards();
 
-        Player player1 = deck.getPlayers().
-                get(0);
+        Player player1 = deck.getPlayers().get(0);
         Player player2 = deck.getPlayers().get(1);
 
         for (int i = 0; i < deck.getSize(); i++) {
@@ -135,15 +66,39 @@ public class GameController {
                 player2.addCardToDeck(deck.getCardByIndex(i));
             }
         }
-        Card activePlayerCard = player1.getTopCard();
-        Card inActivePlayerCard = player2.getTopCard();
 
+        while (player1.hasCards() && player2.hasCards() && isRunning) {
 
-        PrintTable print = new PrintTable(activePlayerCard, inActivePlayerCard);
-        print.printTableActivePlayer(activePlayerCard, player1);
-        int choose = 1;
-        shooting.compare(activePlayerCard, inActivePlayerCard);
-        print.printTable(activePlayerCard, inActivePlayerCard, player1, player2, choose);
+            Card activePlayerCard = player1.getTopCard();
+            Card inActivePlayerCard = player2.getTopCard();
+
+            PrintTable print = new PrintTable(activePlayerCard, inActivePlayerCard);
+
+            print.printTableActivePlayer(activePlayerCard, player1);
+
+            int result = chooseComparator(activePlayerCard, inActivePlayerCard);
+
+            switch (result) {
+                case 0://remis
+                    player1.addCardToDeck(activePlayerCard);
+                    player2.addCardToDeck(inActivePlayerCard);
+                    break;
+                case 1://wygrana
+                    player1.addCardToDeck(activePlayerCard);
+                    player1.addCardToDeck(inActivePlayerCard);
+                    break;
+                case 2://przegrana
+                    player2.addCardToDeck(activePlayerCard);
+                    player2.addCardToDeck(inActivePlayerCard);
+                    break;
+            }
+            print.printTable(activePlayerCard, inActivePlayerCard, player1, player2);
+
+        }
+    }
+
+    public void addLostCardToWinnerPlayerDeck (Card card, Player player){
+        Card lostCard = player.getTopCard();
 
     }
 
@@ -153,6 +108,44 @@ public class GameController {
         HumanPlayer player = new HumanPlayer(textInput);
         deck.addPlayers(player);
 
+    }
+    public int chooseComparator(Card activePlayerCard, Card inActivePlayerCard){
+        ComparatorPace comparatorPace = new ComparatorPace();
+        ComparatorShooting comparatorShooting = new ComparatorShooting();
+        ComparatorDribling comparatorDribling = new ComparatorDribling();
+        ComparatorDefence comparatorDefence = new ComparatorDefence();
+
+        System.out.println("                                                        Choose card stat to compare: " +
+                "\n                                                                                           1.Pace " +
+                "\n                                                                                           2.Shooting" +
+                "\n                                                                                           3.Dribbling" +
+                "\n                                                                                           4.Defending\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "\n" );
+        Scanner scanner = new Scanner(System.in);
+        String textInput = scanner.nextLine();
+
+    int result = 0;
+        switch (textInput){
+            case "1":
+                 result = comparatorPace.compare(activePlayerCard, inActivePlayerCard);
+                 break;
+            case "2":
+                result = comparatorShooting.compare(activePlayerCard, inActivePlayerCard);
+                break;
+            case "3":
+                result = comparatorDribling.compare(activePlayerCard, inActivePlayerCard);
+                break;
+            case "4":
+               result=  comparatorDefence.compare(activePlayerCard, inActivePlayerCard);
+                break;
+            case "0":
+                isRunning = false;
+        }
+        return result;
     }
 }
 

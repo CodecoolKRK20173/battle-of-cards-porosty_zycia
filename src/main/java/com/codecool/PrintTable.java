@@ -143,28 +143,24 @@ public class PrintTable {
 
         System.out.println("\n" +
                 "                                      \n\n\n\n\n\n" +
-                "                                          ██████╗  █████╗ ████████╗████████╗██╗     ███████╗     ██████╗ ███████╗     ██████╗ █████╗ ██████╗ ██████╗ ███████╗\n" +
-                "                                          ██╔══██╗██╔══██╗╚══██╔══╝╚══██╔══╝██║     ██╔════╝    ██╔═══██╗██╔════╝    ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔════╝\n" +
-                "                                          ██████╔╝███████║   ██║      ██║   ██║     █████╗      ██║   ██║█████╗      ██║     ███████║██████╔╝██║  ██║███████╗\n" +
-                "                                          ██╔══██╗██╔══██║   ██║      ██║   ██║     ██╔══╝      ██║   ██║██╔══╝      ██║     ██╔══██║██╔══██╗██║  ██║╚════██║\n" +
-                "                                          ██████╔╝██║  ██║   ██║      ██║   ███████╗███████╗    ╚██████╔╝██║         ╚██████╗██║  ██║██║  ██║██████╔╝███████║\n" +
-                "                                          ╚═════╝ ╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝     ╚═════╝ ╚═╝          ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝\n" +
+                "                                                   ██████╗  █████╗ ████████╗████████╗██╗     ███████╗     ██████╗ ███████╗     ██████╗ █████╗ ██████╗ ██████╗ ███████╗\n" +
+                "                                                   ██╔══██╗██╔══██╗╚══██╔══╝╚══██╔══╝██║     ██╔════╝    ██╔═══██╗██╔════╝    ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔════╝\n" +
+                "                                                   ██████╔╝███████║   ██║      ██║   ██║     █████╗      ██║   ██║█████╗      ██║     ███████║██████╔╝██║  ██║███████╗\n" +
+                "                                                   ██╔══██╗██╔══██║   ██║      ██║   ██║     ██╔══╝      ██║   ██║██╔══╝      ██║     ██╔══██║██╔══██╗██║  ██║╚════██║\n" +
+                "                                                   ██████╔╝██║  ██║   ██║      ██║   ███████╗███████╗    ╚██████╔╝██║         ╚██████╗██║  ██║██║  ██║██████╔╝███████║\n" +
+                "                                                   ╚═════╝ ╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝     ╚═════╝ ╚═╝          ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝\n" +
                 "                                                                                                                                                             \n" +
                 "                                                                                                                                                               " +
                 "");
     }
 
-    public void printTable(Card activePlayerCard, Card inactivePlayerCard, Player activePlayer, Player inactivePlayer, int choose) {
+    public void printTable(Card activePlayerCard, Card inactivePlayerCard, Player activePlayer, Player inactivePlayer) {
 
 
         String format = "                                               |%-32s %2s| %-30s |%-32s %2s|";
 
-
-
-
-
-
-
+        System.out.println("\n                                               |-----------------------------------|                                                |-----------------------------------|");
+        System.out.printf(format, "Player cards: "+ activePlayer.getDeckSize(), "","----------------------------------------------", "Player Cards: " + inactivePlayer.getDeckSize(), "");
         System.out.println("\n                                               |-----------------------------------|                                                |-----------------------------------|");
         System.out.printf(format, "Player name: < "+ activePlayer.getName(), "","----------------------------------------------", "Player name: < " + inactivePlayer.getName(), "");
         System.out.println("\n                                               |-----------------------------------|                                                |-----------------------------------|");
@@ -186,13 +182,10 @@ public class PrintTable {
     public void printTableActivePlayer(Card activePlayerCard, Player activePlayer) {
 
         String format = "                                               |%-32s %-2s|";
+//        System.out.printf(format, "\n\n\nWon round name: < " + activePlayer.getName(), "\n", "\n", "\n", "");
 
-
-
-
-
-
-
+        System.out.println("\n                                               |-----------------------------------|");
+        System.out.printf(format, "Player cards: "+ activePlayer.getDeckSize(), "","----------------------------------------------");
         System.out.println("\n                                               |-----------------------------------|");
         System.out.printf(format, "Player name: < " + activePlayer.getName(), "", "", "", "");
         System.out.println("\n                                               |-----------------------------------|");
@@ -208,12 +201,39 @@ public class PrintTable {
         System.out.println();
         System.out.printf(format, "Defending:", activePlayerCard.getDefending(), "", "", "", "");
         System.out.println("\n                                               |-----------------------------------|");
-
-
     }
 
-
-
+    public void spaceForScreen() {
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println();
+    }
 }
 
 

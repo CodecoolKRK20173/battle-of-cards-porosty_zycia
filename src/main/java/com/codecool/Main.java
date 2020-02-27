@@ -13,6 +13,5 @@ public class Main {
         xmlCard.parse();
         GameController gameController = new GameController(xmlCard);
         gameController.menu();
-//        game.run();
     }
 }

@@ -17,4 +17,5 @@ public class ComparatorShooting implements Comparator<Card> {
             return 2;
         }
     }
+
 }
