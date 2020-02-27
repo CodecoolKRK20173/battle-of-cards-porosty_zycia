@@ -13,6 +13,10 @@ public abstract class Player {
         this.name = name;
     }
 
+    public Player() {
+        getTopCard();
+    }
+
     public Card getTopCard() {
         Card topCard = deck.get(0);
         deck.remove(0);

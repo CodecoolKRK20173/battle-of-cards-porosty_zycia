@@ -1,6 +1,7 @@
 package com.codecool.parser;
 
 import com.codecool.Card;
+import com.codecool.comparator.ComparatorDribling;
 import com.codecool.players.Deck;
 import com.codecool.players.HumanPlayer;
 import com.codecool.players.Player;
@@ -22,11 +23,20 @@ public class GameController {
         HumanPlayer player2 = new HumanPlayer("Stan");
         Player activePlayer = player1;
         Player inActivePlayer = player2;
+        ComparatorDribling comparatorDribling = new ComparatorDribling();
+
+
+
+
 
 
         Deck deck = new Deck(xmlPlayer.getCards());
 
         deck.shuffleCards();
+
+
+
+
 
         deck.printCards();
         for (int i=0; i < deck.getSize() ; i++) {
@@ -41,13 +51,21 @@ public class GameController {
         System.out.println("hand2");
         player2.printCards();
 
+
+        System.out.println(activePlayer.getTopCard().getName() + "    " + inActivePlayer.getTopCard().getName());
+        System.out.println(activePlayer.getTopCard().getDribbling() + "                          " + inActivePlayer.getTopCard().getDribbling());
+
+        System.out.println(comparatorDribling.compare(activePlayer,inActivePlayer));
+
         while (player1.hasCards() && player2.hasCards()) {
+
             Card activePlayerCard = activePlayer.getTopCard();
             Card inActivePlayerCard = inActivePlayer.getTopCard();
-
+            //System.out.println(activePlayerCard.getDribbling() + " " + inActivePlayerCard.getDribbling());
         }
 
         }
+
 
 }
 
