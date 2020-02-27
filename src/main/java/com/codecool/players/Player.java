@@ -20,9 +20,17 @@ public abstract class Player {
         return topCard;
     }
 
+    public List<Card> getAllDeck() {
+        return deck;
+    }
+
     public void addCardToDeck(Card card) {
         deck.add(card);
 
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void printCards(){
