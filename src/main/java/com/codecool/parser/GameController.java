@@ -128,6 +128,8 @@ public class GameController {
         Player player1 = deck.getPlayers().get(0);
         Player player2 = deck.getPlayers().get(1);
 
+
+
         for (int i = 0; i < deck.getSize(); i++) {
             if (i % 2 == 0) {
                 player1.addCardToDeck(deck.getCardByIndex(i));
@@ -138,17 +140,29 @@ public class GameController {
 
         System.out.println(player1.getDeckSize());
         System.out.println(player2.getDeckSize());
+        boolean active = true;
+        Card activePlayerCard = player1.getTopCard();
+        Card inActivePlayerCard = player2.getTopCard();
 
         while (player1.hasCards() && player2.hasCards() && isRunning) {
 
-            Card activePlayerCard = player1.getTopCard();
-            Card inActivePlayerCard = player2.getTopCard();
+           if (active == true) {
+               activePlayerCard = player1.getTopCard();
+               inActivePlayerCard = player2.getTopCard();
+           }else{
+               inActivePlayerCard = player1.getTopCard();
+               activePlayerCard = player2.getTopCard();
+           }
             System.out.println(player1.getDeckSize());
             System.out.println(player2.getDeckSize());
+            System.out.println(active);
 
             PrintTable print = new PrintTable(activePlayerCard, inActivePlayerCard);
-            print.printTableActivePlayer(activePlayerCard, player1);
-
+            if (active == true) {
+                print.printTableActivePlayer(activePlayerCard, player1);
+            }else{
+                print.printTableActivePlayer(activePlayerCard, player2);
+            }
             int result = chooseComparator(activePlayerCard, inActivePlayerCard);
 
             switch (result) {
@@ -161,6 +175,12 @@ public class GameController {
                 case 2:
                     player2.addCardToDeck(activePlayerCard);
                     player2.addCardToDeck(inActivePlayerCard);
+                    if (active == true) {
+                        active = false;
+                    }else{
+                        active=true;
+                    }
+
             }
             print.printTable(activePlayerCard, inActivePlayerCard, player1, player2);
         }
