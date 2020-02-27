@@ -12,7 +12,6 @@ public class ComparatorPace implements Comparator<Card> {
         if (cardActive.getPace() == cardInActive.getPace()) {
             return 0;
         } else if (cardActive.getPace() > cardInActive.getPace()) {
-
             return 1;
         } else {
             return 2;

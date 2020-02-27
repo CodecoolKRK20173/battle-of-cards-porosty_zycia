@@ -139,28 +139,31 @@ public class GameController {
         System.out.println(player1.getDeckSize());
         System.out.println(player2.getDeckSize());
 
-        Card activePlayerCard = player1.getTopCard();
-        Card inActivePlayerCard = player2.getTopCard();
-        System.out.println(player1.getDeckSize());
-        System.out.println(player2.getDeckSize());
+        while (player1.hasCards() && player2.hasCards() && isRunning) {
 
-        PrintTable print = new PrintTable(activePlayerCard, inActivePlayerCard);
-        print.printTableActivePlayer(activePlayerCard, player1);
+            Card activePlayerCard = player1.getTopCard();
+            Card inActivePlayerCard = player2.getTopCard();
+            System.out.println(player1.getDeckSize());
+            System.out.println(player2.getDeckSize());
 
-        int result = chooseComparator(activePlayerCard, inActivePlayerCard);
+            PrintTable print = new PrintTable(activePlayerCard, inActivePlayerCard);
+            print.printTableActivePlayer(activePlayerCard, player1);
 
-        switch (result){
-            case 0:
-                player1.addCardToDeck(activePlayerCard);
-                player2.addCardToDeck(inActivePlayerCard);
-            case 1:
-                player1.addCardToDeck(activePlayerCard);
-                player1.addCardToDeck(inActivePlayerCard);
-            case 2:
-                player2.addCardToDeck(activePlayerCard);
-                player2.addCardToDeck(inActivePlayerCard);
+            int result = chooseComparator(activePlayerCard, inActivePlayerCard);
+
+            switch (result) {
+                case 0:
+                    player1.addCardToDeck(activePlayerCard);
+                    player2.addCardToDeck(inActivePlayerCard);
+                case 1:
+                    player1.addCardToDeck(activePlayerCard);
+                    player1.addCardToDeck(inActivePlayerCard);
+                case 2:
+                    player2.addCardToDeck(activePlayerCard);
+                    player2.addCardToDeck(inActivePlayerCard);
+            }
+            print.printTable(activePlayerCard, inActivePlayerCard, player1, player2);
         }
-        print.printTable(activePlayerCard, inActivePlayerCard, player1, player2);
     }
 
     public void addLostCardToWinnerPlayerDeck (Card card, Player player){
@@ -196,7 +199,7 @@ public class GameController {
                result=  comparatorDefence.compare(activePlayerCard, inActivePlayerCard);
                 break;
         }
-        scanner.close();
+//        scanner.close();
         return result;
 
     }
