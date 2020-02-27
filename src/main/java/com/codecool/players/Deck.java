@@ -1,29 +1,38 @@
 package com.codecool.players;
 
 import com.codecool.Card;
-import com.codecool.parser.XmlPlayer;
-import org.xml.sax.SAXException;
-
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
+import com.codecool.parser.PlayerDeck;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class Deck {
-
     private List<Card> cards;
+    private List<Player> players;
+    private PlayerDeck playerDeck;
 
     public Deck(List<Card> cards) {
         this.cards = cards;
+        this.players = new ArrayList<>();
+        this.playerDeck = new PlayerDeck();
     }
-
     public void shuffleCards() {
         Collections.shuffle(cards);
     }
 
     public Card getCardByIndex(int index) {
         return cards.get(index);
+    }
+    public void createDeck() {
+        int cardIterator = 0;
+        for (Player player : players) {
+            int numOfCardsForEachPlayer = 16;
+            for (int i = 0; i< numOfCardsForEachPlayer; i++) {
+                player.getCardsToUse().addToListOfCards(playerDeck.getCardByIndex(cardIterator));
+                cardIterator++;
+            }
+            System.out.println(player);
+        }
     }
 
     public int getSize() {
@@ -34,6 +43,14 @@ public class Deck {
         for (Card card: cards){
             System.out.println(card.getName());
         }
+    }
+
+    public List<Player> getPlayers(){
+        return players;
+    }
+
+    public void addPlayers(Player player) {
+        this.players.add(player);
     }
     //    List<Card> hand1 = new ArrayList<>();
 //    List<Card> hand2 = new ArrayList<>();
@@ -90,3 +107,4 @@ public class Deck {
 
 
 }
+

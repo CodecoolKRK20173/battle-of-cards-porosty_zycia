@@ -16,13 +16,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class XmlPlayer extends XmlParser {
+public class XmlCard extends XmlParser {
 
-    private List<Card> cards = new ArrayList<Card>();
-
+    private List<Card> cards = new ArrayList<>();
 
     public List<Card> getCards() {
-
         return this.cards;
     }
 

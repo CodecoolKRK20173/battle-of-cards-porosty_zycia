@@ -3,7 +3,6 @@ package com.codecool.resources;
 import com.codecool.Card;
 import com.codecool.players.Player;
 import com.codecool.xmlDAO;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +23,5 @@ public class cardDAO implements xmlDAO {
     public void cardDAOImplement() {
         cards = new ArrayList<Card>();
 
-
     }
-
 }
