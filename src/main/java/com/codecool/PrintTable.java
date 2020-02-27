@@ -155,8 +155,8 @@ public class PrintTable {
     }
 
     public void printTable(Card activePlayerCard, Card inactivePlayerCard, Player activePlayer, Player inactivePlayer) {
-        System.out.println(activePlayer.getDeckSize());
-        System.out.println(inactivePlayer.getDeckSize());
+//        System.out.println(activePlayer.getDeckSize());
+//        System.out.println(inactivePlayer.getDeckSize());
 
         String format = "                                               |%-32s %2s| %-30s |%-32s %2s|";
 

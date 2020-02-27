@@ -67,15 +67,19 @@ public abstract class Player {
         return deck;
     }
 
-    public Player() {
-        getTopCard();
-    }
+//    public Player() {
+//        getTopCard();
+//    }
 
     public Card getTopCard() {
         Card topCard = deck.get(0);
         deck.remove(0);
         return topCard;
     }
+
+    public Card removeCard(Card card) {
+    return deck.remove(0);
+}
 
     public int getDeckSize() {
         return deck.size();

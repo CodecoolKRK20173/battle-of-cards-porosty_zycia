@@ -136,15 +136,15 @@ public class GameController {
             }
         }
 
-        System.out.println(player1.getDeckSize());
-        System.out.println(player2.getDeckSize());
+        System.out.println(player1.getDeckSize()+"  karty przed pokazaniem");
+        System.out.println(player2.getDeckSize()+"  karty przed pokzaniem");
 
         while (player1.hasCards() && player2.hasCards() && isRunning) {
 
             Card activePlayerCard = player1.getTopCard();
             Card inActivePlayerCard = player2.getTopCard();
-            System.out.println(player1.getDeckSize());
-            System.out.println(player2.getDeckSize());
+            System.out.println(player1.getDeckSize()+"  karty gracza");
+            System.out.println(player2.getDeckSize()+"  karty gracza");
 
             PrintTable print = new PrintTable(activePlayerCard, inActivePlayerCard);
             print.printTableActivePlayer(activePlayerCard, player1);
@@ -152,15 +152,20 @@ public class GameController {
             int result = chooseComparator(activePlayerCard, inActivePlayerCard);
 
             switch (result) {
-                case 0:
+                case 0://remis
                     player1.addCardToDeck(activePlayerCard);
                     player2.addCardToDeck(inActivePlayerCard);
-                case 1:
+                    break;
+                case 1://wygrana
                     player1.addCardToDeck(activePlayerCard);
                     player1.addCardToDeck(inActivePlayerCard);
-                case 2:
+//                    player2.removeCard(inActivePlayerCard);
+                    break;
+                case 2://przegrana
                     player2.addCardToDeck(activePlayerCard);
                     player2.addCardToDeck(inActivePlayerCard);
+//                    player1.removeCard(activePlayerCard);
+                    break;
             }
             print.printTable(activePlayerCard, inActivePlayerCard, player1, player2);
         }
@@ -191,17 +196,19 @@ public class GameController {
         switch (textInput){
             case "1":
                  result = comparatorPace.compare(activePlayerCard, inActivePlayerCard);
+                 break;
             case "2":
-              result = comparatorShooting.compare(activePlayerCard, inActivePlayerCard);
+                result = comparatorShooting.compare(activePlayerCard, inActivePlayerCard);
+                break;
             case "3":
                 result = comparatorDribling.compare(activePlayerCard, inActivePlayerCard);
+                break;
             case "4":
                result=  comparatorDefence.compare(activePlayerCard, inActivePlayerCard);
                 break;
         }
 //        scanner.close();
         return result;
-
     }
 }
 
