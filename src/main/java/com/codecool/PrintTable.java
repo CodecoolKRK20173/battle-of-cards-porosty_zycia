@@ -57,7 +57,7 @@ public class PrintTable {
                 "");
     }
 
-    public void printTable(Card activePlayerCard, Card inactivePlayerCard, Player activePlayer, Player inactivePlayer) {
+    public void printTable(Card activePlayerCard, Card inactivePlayerCard, Player activePlayer, Player inactivePlayer, int battleStat) {
 
         String format = "                                               |%-32s %2s| %-30s |%-32s %2s|";
 

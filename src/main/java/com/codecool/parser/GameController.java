@@ -51,17 +51,16 @@ public class GameController {
 //                    playerController.playGame();
                     Card activePlayerCard = activePlayer.getTopCard();
                     Card inActivePlayerCard = inActivePlayer.getTopCard();
-
-                    //TODO show active player card - choose characteristic to play - (compare)
-
+                    //TODO show active player card -
                     PrintTable print = new PrintTable(activePlayerCard,inActivePlayerCard);
-                    print.printTableActivePlayer(activePlayerCard, activePlayer);
-
 
                     print.printMenuOptions();
                     print.printTitle();
-                    print.printTable(activePlayerCard, inActivePlayerCard, activePlayer, inActivePlayer);
+                    print.printTableActivePlayer(activePlayerCard, activePlayer);
 
+                    //TODO choose characteristic to play "battle stat"
+                    //TODO - (compare)
+                    print.printTable(activePlayerCard, inActivePlayerCard, activePlayer, inActivePlayer, 1);
                     //TODO move cards
 
                     break;
