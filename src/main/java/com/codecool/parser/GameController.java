@@ -12,9 +12,9 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.Collections;
+//import java.util.List;
 
 public class GameController {
 
@@ -64,8 +64,11 @@ public class GameController {
         System.out.println(topCard.getDribbling() + "                          " + topCard1.getDribbling());
 
         System.out.println("Dribling : " + comparatorDribling.compare(topCard , topCard1));
+        System.out.println(topCard.getPace() + "                          " + topCard1.getPace());
         System.out.println("Pace : " + comparatorPace.compare(topCard , topCard1));
+        System.out.println(topCard.getShooting() + "                          " + topCard1.getShooting());
         System.out.println("Shooting : " + comparatorShooting.compare(topCard , topCard1));
+        System.out.println(topCard.getDefending() + "                          " + topCard1.getDefending());
         System.out.println("Defence : " + comparatorDefence.compare(topCard , topCard1));
 
 
