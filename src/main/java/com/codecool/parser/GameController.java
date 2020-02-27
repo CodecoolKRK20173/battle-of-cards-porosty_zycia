@@ -88,8 +88,6 @@ public class GameController {
         deck = new Deck(xmlCard.getCards());
     }
 
-//    Deck deck = new Deck(List <Card> cards);
-
     public void menu() throws IOException, SAXException, ParserConfigurationException {
 
         PrintTable printTable = new PrintTable();
@@ -112,23 +110,10 @@ public class GameController {
                 break;
         }
     }
-//    public void setPlayers() {
-//
-//        deck.addPlayers(player);
-//    }
 
     public void run() throws ParserConfigurationException, SAXException, IOException {
         xmlPlayer.parse();
-//        Deck deck = new Deck(xmlPlayer.getCards());
-//        createPlayers();
-//        Scanner scan1 = new Scanner(System.in);
-//        String textInput1 = scan1.nextLine();
-//        HumanPlayer player1 = new HumanPlayer(textInput1);
-//        Scanner scan2 = new Scanner(System.in);
-//        String textInput2 = scan2.nextLine();
-//        HumanPlayer player2 = new HumanPlayer(textInput2);
         deck.shuffleCards();
-//        deck.createDeck();
         deck.printCards();
 
         Player player1 = deck.getPlayers().
@@ -142,29 +127,12 @@ public class GameController {
                 player2.addCardToDeck(deck.getCardByIndex(i));
             }
         }
-//player1 == activePlayer
         Card activePlayerCard = player1.getTopCard();
         Card inActivePlayerCard = player2.getTopCard();
 
         PrintTable print = new PrintTable(activePlayerCard, inActivePlayerCard);
         print.printTableActivePlayer(activePlayerCard, player1);
 
-//        System.out.println("hand1");
-//        player1.printCards();
-//        System.out.println("hand2");
-//        player2.printCards();
-
-//    Random random = new Random();
-//    int randomNum = random.nextInt();deck.getPlayers().size();
-//    playerTurn = deck.getPlayers().get(randomNum);
-
-
-//        while (player1.hasCards() && player2.hasCards()) {
-//            Card activePlayerCard = activePlayer.getTopCard();
-//            Card inActivePlayerCard = inActivePlayer.getTopCard();
-//            PrintTable print = new PrintTable(activePlayerCard,inActivePlayerCard);
-//            print.printTable(activePlayerCard, inActivePlayerCard);
-//        }
     }
 
     public void createPlayers() {
@@ -173,8 +141,6 @@ public class GameController {
         HumanPlayer player = new HumanPlayer(textInput);
         deck.addPlayers(player);
 
-//            HumanPlayer activePlayer = player1;
-//            HumanPlayer inActivePlayer = player2;
     }
 }
 
