@@ -83,6 +83,10 @@ public abstract class Player {
         }
     }
 
+    public List<Card> getDeck() {
+        return deck;
+    }
+
     public boolean hasCards() {
         if (deck.size() > 0) {
             return true;

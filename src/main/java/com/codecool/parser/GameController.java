@@ -122,7 +122,7 @@ public class GameController {
     public void run() throws ParserConfigurationException, SAXException, IOException {
         xmlPlayer.parse();
         deck.shuffleCards();
-        deck.printCards();
+//        deck.printCards();
 
         Player player1 = deck.getPlayers().
                 get(0);
@@ -142,8 +142,19 @@ public class GameController {
         PrintTable print = new PrintTable(activePlayerCard, inActivePlayerCard);
         print.printTableActivePlayer(activePlayerCard, player1);
         int choose = 1;
-        shooting.compare(activePlayerCard, inActivePlayerCard);
-        print.printTable(activePlayerCard, inActivePlayerCard, player1, player2, choose);
+
+        int shoot = shooting.compare(activePlayerCard, inActivePlayerCard);
+        int dribble = dribbling.compare(activePlayerCard, inActivePlayerCard);
+        int pac = pace.compare(activePlayerCard, inActivePlayerCard);
+        int def = defence.compare(activePlayerCard, inActivePlayerCard);
+
+        Player winner;
+
+        if (shoot == 1) {
+            winner = player1;
+            print.printTable(activePlayerCard, inActivePlayerCard, player1, player2, choose, winner);
+
+        }
 
     }
 
