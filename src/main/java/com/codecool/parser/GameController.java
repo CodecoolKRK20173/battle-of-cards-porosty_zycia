@@ -113,6 +113,7 @@ public class GameController {
             case "2":
                 break;
         }
+        scan.close();
     }
 
     public void run() throws ParserConfigurationException, SAXException, IOException {
@@ -136,7 +137,7 @@ public class GameController {
 
         PrintTable print = new PrintTable(activePlayerCard, inActivePlayerCard);
         print.printTableActivePlayer(activePlayerCard, player1);
-
+        chooseComparator();
     }
 
     public void createPlayers() {
@@ -144,6 +145,30 @@ public class GameController {
         String textInput = scan.nextLine();
         HumanPlayer player = new HumanPlayer(textInput);
         deck.addPlayers(player);
+
+    }
+    public void chooseComparator(){
+        ComparatorPace comparatorPace = new ComparatorPace();
+        ComparatorShooting comparatorShooting = new ComparatorShooting();
+        ComparatorDribling comparatorDribling = new ComparatorDribling();
+        ComparatorDefence comparatorDefence = new ComparatorDefence();
+
+        System.out.println("Choose card stat to compare: \n1.Pace \n2.Shooting\n3.Dribbling\n4.Defending");
+        Scanner scanner = new Scanner(System.in);
+        String textInput = scanner.nextLine();
+
+        switch (textInput){
+            case "1":
+                comparatorPace.compare(activePlayerCard, inActivePlayerCard);
+            case "2":
+              comparatorShooting.compare();
+            case "3":
+                comparatorDribling.compare();
+            case "4":
+                comparatorDefence.compare();
+                break;
+        }
+        scanner.close();
 
     }
 }
