@@ -28,10 +28,12 @@ public class AIPlayer extends Player {
     public int max(Card cardActive) {
 
         aiList.add(cardActive.getPace());
-        aiList.add(cardActive.getDefending());
-        aiList.add(cardActive.getDribbling());
         aiList.add(cardActive.getShooting());
-        return Collections.max(aiList);
+        aiList.add(cardActive.getDribbling());
+        aiList.add(cardActive.getDefending());
+
+
+        return aiList.indexOf(Collections.max(aiList));
         }
 
 

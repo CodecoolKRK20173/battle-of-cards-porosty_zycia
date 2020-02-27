@@ -177,7 +177,7 @@ public class GameController {
             }else{
                 print.printTableActivePlayer(activePlayerCard, aiPlayer);
             }
-            int result = chooseComparator(activePlayerCard, inActivePlayerCard);
+            int result = chooseComparatorAi(activePlayerCard, inActivePlayerCard);
 
             switch (result) {
                 case 0:
@@ -304,6 +304,34 @@ public class GameController {
                 result = comparatorDribling.compare(activePlayerCard, inActivePlayerCard);
             case "4":
                result=  comparatorDefence.compare(activePlayerCard, inActivePlayerCard);
+                break;
+        }
+//        scanner.close();
+        return result;
+
+    }
+
+    public int chooseComparatorAi(Card activePlayerCard, Card inActivePlayerCard){
+        ComparatorPace comparatorPace = new ComparatorPace();
+        ComparatorShooting comparatorShooting = new ComparatorShooting();
+        ComparatorDribling comparatorDribling = new ComparatorDribling();
+        ComparatorDefence comparatorDefence = new ComparatorDefence();
+
+//        System.out.println("Choose card stat to compare: \n1.Pace \n2.Shooting\n3.Dribbling\n4.Defending");
+//        Scanner scanner = new Scanner(System.in);
+//        String textInput = scanner.nextLine();
+        int result = 0;
+        AIPlayer aiPlayer = new AIPlayer("Computer");
+        int textInput =  aiPlayer.max(activePlayerCard);
+        switch (textInput){
+            case 1:
+                result = comparatorPace.compare(activePlayerCard, inActivePlayerCard);
+            case 2:
+                result = comparatorShooting.compare(activePlayerCard, inActivePlayerCard);
+            case 3:
+                result = comparatorDribling.compare(activePlayerCard, inActivePlayerCard);
+            case 4:
+                result=  comparatorDefence.compare(activePlayerCard, inActivePlayerCard);
                 break;
         }
 //        scanner.close();
