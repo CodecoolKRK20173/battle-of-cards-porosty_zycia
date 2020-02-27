@@ -61,6 +61,7 @@ public class GameController {
 
             Card activePlayerCard = activePlayer.getTopCard();
             Card inActivePlayerCard = inActivePlayer.getTopCard();
+
             //System.out.println(activePlayerCard.getDribbling() + " " + inActivePlayerCard.getDribbling());
         }
 
