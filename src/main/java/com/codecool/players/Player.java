@@ -67,10 +67,6 @@ public abstract class Player {
         return deck;
     }
 
-//    public Player() {
-//        getTopCard();
-//    }
-
     public Card getTopCard() {
         Card topCard = deck.get(0);
         deck.remove(0);
@@ -86,12 +82,6 @@ public abstract class Player {
     }
     public void addCardToDeck(Card card) {
         deck.add(card);
-    }
-
-    public void printCards() {
-        for (Card card : deck) {
-            System.out.println(card.getName());
-        }
     }
 
     public boolean hasCards() {

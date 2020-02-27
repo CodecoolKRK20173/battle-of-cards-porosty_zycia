@@ -27,24 +27,20 @@ public class XmlCard extends XmlParser {
     public void setCards(List<Card> cards) {
         this.cards = cards;
     }
+
     public void parse() throws IOException, SAXException, ParserConfigurationException {
         File fXmlFile = new File("src/main/java/com/codecool/resources/players.xml");
-       // "/Users/mzi/Desktop/zADANIA/battle-of-cards-porosty_zycia1/BattleCards/src/com/codecool/resources/players.xml"
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
         Document doc = dBuilder.parse(fXmlFile);
 
         doc.getDocumentElement().normalize();
 
-//        System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
-
         NodeList nList = doc.getElementsByTagName("player");
 
         for (int temp = 0; temp < nList.getLength(); temp++) {
 
             Node nNode = nList.item(temp);
-
-//            System.out.println("\nCurrent Element :" + nNode.getNodeName());
 
             if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
@@ -62,15 +58,7 @@ public class XmlCard extends XmlParser {
 
                 this.cards.add(card);
 
-//                System.out.println("Cards id : " + eElement.getAttribute("id"));
-//                System.out.println("First Name : " + eElement.getElementsByTagName("name").item(0).getTextContent());
-//                System.out.println("Pace : " + eElement.getElementsByTagName("pace").item(0).getTextContent());
-//                System.out.println("Shooting : " + eElement.getElementsByTagName("shooting").item(0).getTextContent());
-//                System.out.println("Dribling : " + eElement.getElementsByTagName("dribling").item(0).getTextContent());
-//                System.out.println("Defending : " + eElement.getElementsByTagName("defending").item(0).getTextContent());
             }
         }
-
-
     }
 }
