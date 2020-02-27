@@ -86,6 +86,7 @@ public class GameController {
     private XmlCard xmlCard;
     XmlCard xmlPlayer = new XmlCard();
     Deck deck;
+    boolean isRunning = true;
 
     public GameController(XmlCard xmlCard) {
         this.xmlCard = xmlCard;
@@ -100,6 +101,9 @@ public class GameController {
 
         System.out.println("Choose an option: \n1.Start Game (PvP) \n2.Quit game");
         Scanner scan = new Scanner(System.in);
+
+        //        while (player1.hasCards() && player2.hasCards() && isRunning) {
+
         String textInput = scan.nextLine();
 
         switch (textInput) {
@@ -121,8 +125,7 @@ public class GameController {
         deck.shuffleCards();
         deck.printCards();
 
-        Player player1 = deck.getPlayers().
-                get(0);
+        Player player1 = deck.getPlayers().get(0);
         Player player2 = deck.getPlayers().get(1);
 
         for (int i = 0; i < deck.getSize(); i++) {
@@ -132,12 +135,37 @@ public class GameController {
                 player2.addCardToDeck(deck.getCardByIndex(i));
             }
         }
+
+        System.out.println(player1.getDeckSize());
+        System.out.println(player2.getDeckSize());
+
         Card activePlayerCard = player1.getTopCard();
         Card inActivePlayerCard = player2.getTopCard();
+        System.out.println(player1.getDeckSize());
+        System.out.println(player2.getDeckSize());
 
         PrintTable print = new PrintTable(activePlayerCard, inActivePlayerCard);
         print.printTableActivePlayer(activePlayerCard, player1);
-        chooseComparator();
+
+        int result = chooseComparator(activePlayerCard, inActivePlayerCard);
+
+        switch (result){
+            case 0:
+                player1.addCardToDeck(activePlayerCard);
+                player2.addCardToDeck(inActivePlayerCard);
+            case 1:
+                player1.addCardToDeck(activePlayerCard);
+                player1.addCardToDeck(inActivePlayerCard);
+            case 2:
+                player2.addCardToDeck(activePlayerCard);
+                player2.addCardToDeck(inActivePlayerCard);
+        }
+        print.printTable(activePlayerCard, inActivePlayerCard, player1, player2);
+    }
+
+    public void addLostCardToWinnerPlayerDeck (Card card, Player player){
+        Card lostCard = player.getTopCard();
+
     }
 
     public void createPlayers() {
@@ -147,7 +175,7 @@ public class GameController {
         deck.addPlayers(player);
 
     }
-    public void chooseComparator(){
+    public int chooseComparator(Card activePlayerCard, Card inActivePlayerCard){
         ComparatorPace comparatorPace = new ComparatorPace();
         ComparatorShooting comparatorShooting = new ComparatorShooting();
         ComparatorDribling comparatorDribling = new ComparatorDribling();
@@ -156,19 +184,20 @@ public class GameController {
         System.out.println("Choose card stat to compare: \n1.Pace \n2.Shooting\n3.Dribbling\n4.Defending");
         Scanner scanner = new Scanner(System.in);
         String textInput = scanner.nextLine();
-
+    int result = 0;
         switch (textInput){
             case "1":
-                comparatorPace.compare(activePlayerCard, inActivePlayerCard);
+                 result = comparatorPace.compare(activePlayerCard, inActivePlayerCard);
             case "2":
-              comparatorShooting.compare();
+              result = comparatorShooting.compare(activePlayerCard, inActivePlayerCard);
             case "3":
-                comparatorDribling.compare();
+                result = comparatorDribling.compare(activePlayerCard, inActivePlayerCard);
             case "4":
-                comparatorDefence.compare();
+               result=  comparatorDefence.compare(activePlayerCard, inActivePlayerCard);
                 break;
         }
         scanner.close();
+        return result;
 
     }
 }

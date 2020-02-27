@@ -63,6 +63,10 @@ public abstract class Player {
         this.name = name;
     }
 
+    public List<Card> getDeck() {
+        return deck;
+    }
+
     public Player() {
         getTopCard();
     }
@@ -73,6 +77,9 @@ public abstract class Player {
         return topCard;
     }
 
+    public int getDeckSize() {
+        return deck.size();
+    }
     public void addCardToDeck(Card card) {
         deck.add(card);
     }
