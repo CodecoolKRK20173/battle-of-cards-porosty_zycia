@@ -7,7 +7,7 @@
         <passing>85</passing>
         <dribling>85</dribling>
         <phisicality>85</phisicality>
-        <defending>85</defending>
+        <defending>44</defending>
     </player>
     <player id="2">
         <name>Diego Maradona</name>
@@ -62,7 +62,7 @@
         <pace>77</pace>
         <shooting>67</shooting>
         <dribling>87</dribling>
-        <defending>90</defending>
+        <defending>22</defending>
     </player>
     <player id="9">
         <name>Emanuel Olisadebe</name>
@@ -111,14 +111,14 @@
         <pace>76</pace>
         <shooting>88</shooting>
         <dribling>56</dribling>
-        <defending>90</defending>
+        <defending>78</defending>
     </player>
     <player id="16">
         <name>Eric Cantona</name>
         <pace>87</pace>
         <shooting>99</shooting>
         <dribling>61</dribling>
-        <defending>34</defending>
+        <defending>88</defending>
     </player>
     <player id="17">
         <name>Ole Gunjar Solkasjear</name>
@@ -132,7 +132,7 @@
         <pace>92</pace>
         <shooting>97</shooting>
         <dribling>93</dribling>
-        <defending>67</defending>
+        <defending>27</defending>
     </player>
     <player id="19">
         <name>Jerzy Dudek</name>
@@ -160,7 +160,7 @@
         <pace>76</pace>
         <shooting>89</shooting>
         <dribling>90</dribling>
-        <defending>65</defending>
+        <defending>25</defending>
     </player>
     <player id="23">
         <name>Wojciech Kowalczyk</name>
