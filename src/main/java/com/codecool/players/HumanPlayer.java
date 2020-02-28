@@ -3,7 +3,7 @@ package com.codecool.players;
 import com.codecool.Card;
 import com.codecool.parser.PlayerDeck;
 
-public class HumanPlayer extends Player{
+public class HumanPlayer extends Player {
     private PlayerDeck cardsToUse;
 
     public HumanPlayer(String name) {

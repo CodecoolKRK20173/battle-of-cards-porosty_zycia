@@ -24,9 +24,6 @@ public class XmlCard extends XmlParser {
         return this.cards;
     }
 
-    public void setCards(List<Card> cards) {
-        this.cards = cards;
-    }
 
     public void parse() throws IOException, SAXException, ParserConfigurationException {
         File fXmlFile = new File("src/main/java/com/codecool/resources/players.xml");

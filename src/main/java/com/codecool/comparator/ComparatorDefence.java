@@ -1,7 +1,6 @@
 package com.codecool.comparator;
 
 import com.codecool.Card;
-import com.codecool.players.Player;
 
 import java.util.Comparator;
 

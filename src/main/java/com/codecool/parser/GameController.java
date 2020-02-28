@@ -2,7 +2,7 @@ package com.codecool.parser;
 
 import com.codecool.Card;
 import com.codecool.PrintTable;
-import com.codecool.UserGlobalInput;
+
 import com.codecool.comparator.ComparatorDefence;
 import com.codecool.comparator.ComparatorDribling;
 import com.codecool.comparator.ComparatorPace;
@@ -32,8 +32,8 @@ public class GameController {
         printTable.printTitle();
 
         System.out.println("                                                                       Choose an option: " +
-                           "\n                                                                                           1.Start Game (PvP) " +
-                           "\n                                                                                           2.Quit game");
+                "\n                                                                                           1.Start Game (PvP) " +
+                "\n                                                                                           2.Quit game");
         Scanner scan = new Scanner(System.in);
 
         String textInput = scan.nextLine();
@@ -96,7 +96,7 @@ public class GameController {
         }
     }
 
-    public void addLostCardToWinnerPlayerDeck (Card card, Player player){
+    public void addLostCardToWinnerPlayerDeck(Card card, Player player) {
         Card lostCard = player.getTopCard();
 
     }
@@ -108,7 +108,8 @@ public class GameController {
         deck.addPlayers(player);
 
     }
-    public int chooseComparator(Card activePlayerCard, Card inActivePlayerCard){
+
+    public int chooseComparator(Card activePlayerCard, Card inActivePlayerCard) {
         ComparatorPace comparatorPace = new ComparatorPace();
         ComparatorShooting comparatorShooting = new ComparatorShooting();
         ComparatorDribling comparatorDribling = new ComparatorDribling();
@@ -123,15 +124,15 @@ public class GameController {
                 "\n" +
                 "\n" +
                 "\n" +
-                "\n" );
+                "\n");
         Scanner scanner = new Scanner(System.in);
         String textInput = scanner.nextLine();
 
-    int result = 0;
-        switch (textInput){
+        int result = 0;
+        switch (textInput) {
             case "1":
-                 result = comparatorPace.compare(activePlayerCard, inActivePlayerCard);
-                 break;
+                result = comparatorPace.compare(activePlayerCard, inActivePlayerCard);
+                break;
             case "2":
                 result = comparatorShooting.compare(activePlayerCard, inActivePlayerCard);
                 break;
@@ -139,7 +140,7 @@ public class GameController {
                 result = comparatorDribling.compare(activePlayerCard, inActivePlayerCard);
                 break;
             case "4":
-               result=  comparatorDefence.compare(activePlayerCard, inActivePlayerCard);
+                result = comparatorDefence.compare(activePlayerCard, inActivePlayerCard);
                 break;
             case "0":
                 isRunning = false;

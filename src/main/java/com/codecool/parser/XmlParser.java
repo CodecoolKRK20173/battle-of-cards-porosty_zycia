@@ -2,6 +2,7 @@ package com.codecool.parser;
 
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -12,7 +13,7 @@ public abstract class XmlParser {
 
     protected Document doc;
 
-    public void loadXmlDocument(String xmlPath)  {
+    public void loadXmlDocument(String xmlPath) {
         try {
             File fXmlFile = new File(xmlPath);
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();

@@ -2,6 +2,7 @@ package com.codecool.players;
 
 import com.codecool.Card;
 import com.codecool.parser.PlayerDeck;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -16,6 +17,7 @@ public class Deck {
         this.players = new ArrayList<>();
         this.playerDeck = new PlayerDeck();
     }
+
     public void shuffleCards() {
         Collections.shuffle(cards);
     }
@@ -28,7 +30,7 @@ public class Deck {
         return cards.size();
     }
 
-    public List<Player> getPlayers(){
+    public List<Player> getPlayers() {
         return players;
     }
 

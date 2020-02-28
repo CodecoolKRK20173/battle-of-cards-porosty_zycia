@@ -128,14 +128,13 @@ public class PrintTable {
     private Card inactivePlayerCard;
 
 
-
-    public PrintTable(){
+    public PrintTable() {
 
     }
 
-    public PrintTable(Card activePlayerCard, Card inactivePlayerCard){
+    public PrintTable(Card activePlayerCard, Card inactivePlayerCard) {
         this.activePlayerCard = activePlayerCard;
-        this.inactivePlayerCard =inactivePlayerCard;
+        this.inactivePlayerCard = inactivePlayerCard;
 
     }
 
@@ -159,32 +158,32 @@ public class PrintTable {
         String format = "                                               |%-32s %2s| %-30s |%-32s %2s|";
 
         System.out.println("\n                                               |-----------------------------------|                                                |-----------------------------------|");
-        System.out.printf(format, "Player cards: "+ activePlayer.getDeckSize(), "","----------------------------------------------", "Player Cards: " + inactivePlayer.getDeckSize(), "");
+        System.out.printf(format, "Player cards: " + activePlayer.getDeckSize(), "", "----------------------------------------------", "Player Cards: " + inactivePlayer.getDeckSize(), "");
         System.out.println("\n                                               |-----------------------------------|                                                |-----------------------------------|");
-        System.out.printf(format, "Player name: < "+ activePlayer.getName() , " ","----------------------------------------------", "Player name: < " + inactivePlayer.getName() , " ");
+        System.out.printf(format, "Player name: < " + activePlayer.getName(), " ", "----------------------------------------------", "Player name: < " + inactivePlayer.getName(), " ");
         System.out.println("\n                                               |-----------------------------------|                                                |-----------------------------------|");
         System.out.printf(format, "Card Id: ", activePlayerCard.getId(), "----------------------------------------------", "Card Id: ", inactivePlayerCard.getId());
         System.out.println();
-        System.out.printf(format, Chalk.on(activePlayerCard.getName()).green(), "            ", "----------------------------------------------", Chalk.on(inactivePlayerCard.getName()).green(),"            ");
+        System.out.printf(format, Chalk.on(activePlayerCard.getName()).green(), "            ", "----------------------------------------------", Chalk.on(inactivePlayerCard.getName()).green(), "            ");
         System.out.println();
-        System.out.printf(format, "Pace:", activePlayerCard.getPace(), "----------------------------------------------", "Pace: ", inactivePlayerCard.getPace(),"");
+        System.out.printf(format, "Pace:", activePlayerCard.getPace(), "----------------------------------------------", "Pace: ", inactivePlayerCard.getPace(), "");
         System.out.println();
-        System.out.printf(format, "Shooting:", activePlayerCard.getShooting(), "----------------------------------------------", "Shooting", inactivePlayerCard.getShooting(),"");
+        System.out.printf(format, "Shooting:", activePlayerCard.getShooting(), "----------------------------------------------", "Shooting", inactivePlayerCard.getShooting(), "");
         System.out.println();
-        System.out.printf(format, "Dribbling:", activePlayerCard.getDribbling(), "----------------------------------------------", "Dribbling", inactivePlayerCard.getDribbling(),"");
+        System.out.printf(format, "Dribbling:", activePlayerCard.getDribbling(), "----------------------------------------------", "Dribbling", inactivePlayerCard.getDribbling(), "");
         System.out.println();
-        System.out.printf(format, "Defending:", activePlayerCard.getDefending(), "----------------------------------------------", "Defending", inactivePlayerCard.getDefending(),"");
+        System.out.printf(format, "Defending:", activePlayerCard.getDefending(), "----------------------------------------------", "Defending", inactivePlayerCard.getDefending(), "");
         System.out.println("\n                                               |-----------------------------------|                                                |-----------------------------------|");
 
 
     }
+
     public void printTableActivePlayer(Card activePlayerCard, Player activePlayer) {
 
         String format = "                                               |%-32s %-2s|";
-//        System.out.printf(format, "\n\n\nWon round name: < " + activePlayer.getName(), "\n", "\n", "\n", "");
 
         System.out.println("\n                                               |-----------------------------------|");
-        System.out.printf(format, "Player cards: "+ activePlayer.getDeckSize(), "","----------------------------------------------");
+        System.out.printf(format, "Player cards: " + activePlayer.getDeckSize(), "", "----------------------------------------------");
         System.out.println("\n                                               |-----------------------------------|");
         System.out.printf(format, "Player name: < " + activePlayer.getName(), "", "", "", "");
         System.out.println("\n                                               |-----------------------------------|");
@@ -194,7 +193,7 @@ public class PrintTable {
         System.out.println();
         System.out.printf(format, "Pace:", activePlayerCard.getPace(), "", "", "", "");
         System.out.println();
-        System.out.printf(format, "Shooting:", activePlayerCard.getShooting(), "", "","");
+        System.out.printf(format, "Shooting:", activePlayerCard.getShooting(), "", "", "");
         System.out.println();
         System.out.printf(format, "Dribbling:", activePlayerCard.getDribbling(), "", "", "", "");
         System.out.println();
@@ -202,41 +201,9 @@ public class PrintTable {
         System.out.println("\n                                               |-----------------------------------|");
     }
 
-    public void spaceForScreen() {
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-    }
-
     public void winPrint(Player activePlayer) {
         System.out.println("\n" +
-                "\n\n\n                                                                       ██╗    ██╗██╗███╗   ██╗███╗   ██╗███████╗██████╗     ██╗███████╗   \n" +
+                "\n\n\n                                                                 ██╗    ██╗██╗███╗   ██╗███╗   ██╗███████╗██████╗     ██╗███████╗   \n" +
                 "                                                                       ██║    ██║██║████╗  ██║████╗  ██║██╔════╝██╔══██╗    ██║██╔════╝██╗\n" +
                 "                                                                       ██║ █╗ ██║██║██╔██╗ ██║██╔██╗ ██║█████╗  ██████╔╝    ██║███████╗╚═╝\n" +
                 "                                                                       ██║███╗██║██║██║╚██╗██║██║╚██╗██║██╔══╝  ██╔══██╗    ██║╚════██║██╗\n" +

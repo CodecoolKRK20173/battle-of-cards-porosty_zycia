@@ -3,6 +3,7 @@ package com.codecool;
 import com.codecool.parser.GameController;
 import com.codecool.parser.XmlCard;
 import org.xml.sax.SAXException;
+
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 
