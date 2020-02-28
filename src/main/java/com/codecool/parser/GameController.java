@@ -93,7 +93,6 @@ public class GameController {
                     break;
             }
             print.printTable(activePlayerCard, inActivePlayerCard, player1, player2);
-
         }
     }
 

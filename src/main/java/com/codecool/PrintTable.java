@@ -121,13 +121,13 @@ package com.codecool;
 
 import com.codecool.players.Player;
 import com.github.tomaslanger.chalk.Chalk;
-import org.xml.sax.SAXException;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
+
 
 public class PrintTable {
     private Card activePlayerCard;
     private Card inactivePlayerCard;
+
+
 
     public PrintTable(){
 
@@ -141,7 +141,7 @@ public class PrintTable {
 
     public void printTitle() {
 
-        System.out.println("\n" +
+        System.out.println("\n" + Color.BLUE +
                 "                                      \n\n\n\n\n\n" +
                 "                                                   ██████╗  █████╗ ████████╗████████╗██╗     ███████╗     ██████╗ ███████╗     ██████╗ █████╗ ██████╗ ██████╗ ███████╗\n" +
                 "                                                   ██╔══██╗██╔══██╗╚══██╔══╝╚══██╔══╝██║     ██╔════╝    ██╔═══██╗██╔════╝    ██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔════╝\n" +
@@ -151,7 +151,7 @@ public class PrintTable {
                 "                                                   ╚═════╝ ╚═╝  ╚═╝   ╚═╝      ╚═╝   ╚══════╝╚══════╝     ╚═════╝ ╚═╝          ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝\n" +
                 "                                                                                                                                                             \n" +
                 "                                                                                                                                                               " +
-                "");
+                "" + Color.RESET);
     }
 
     public void printTable(Card activePlayerCard, Card inactivePlayerCard, Player activePlayer, Player inactivePlayer) {
@@ -161,11 +161,11 @@ public class PrintTable {
         System.out.println("\n                                               |-----------------------------------|                                                |-----------------------------------|");
         System.out.printf(format, "Player cards: "+ activePlayer.getDeckSize(), "","----------------------------------------------", "Player Cards: " + inactivePlayer.getDeckSize(), "");
         System.out.println("\n                                               |-----------------------------------|                                                |-----------------------------------|");
-        System.out.printf(format, "Player name: < "+ activePlayer.getName(), "","----------------------------------------------", "Player name: < " + inactivePlayer.getName(), "");
+        System.out.printf(format, "Player name: < "+ activePlayer.getName() , " ","----------------------------------------------", "Player name: < " + inactivePlayer.getName() , " ");
         System.out.println("\n                                               |-----------------------------------|                                                |-----------------------------------|");
         System.out.printf(format, "Card Id: ", activePlayerCard.getId(), "----------------------------------------------", "Card Id: ", inactivePlayerCard.getId());
         System.out.println();
-        System.out.printf(format, Chalk.on(activePlayerCard.getName()).red(), "            ", "----------------------------------------------", Chalk.on(inactivePlayerCard.getName()).red(),"            ");
+        System.out.printf(format, Chalk.on(activePlayerCard.getName()).green(), "            ", "----------------------------------------------", Chalk.on(inactivePlayerCard.getName()).green(),"            ");
         System.out.println();
         System.out.printf(format, "Pace:", activePlayerCard.getPace(), "----------------------------------------------", "Pace: ", inactivePlayerCard.getPace(),"");
         System.out.println();
@@ -232,6 +232,18 @@ public class PrintTable {
         System.out.println();
         System.out.println();
         System.out.println();
+    }
+
+    public void winPrint(Player activePlayer) {
+        System.out.println("\n" +
+                "\n\n\n                                                                       ██╗    ██╗██╗███╗   ██╗███╗   ██╗███████╗██████╗     ██╗███████╗   \n" +
+                "                                                                       ██║    ██║██║████╗  ██║████╗  ██║██╔════╝██╔══██╗    ██║██╔════╝██╗\n" +
+                "                                                                       ██║ █╗ ██║██║██╔██╗ ██║██╔██╗ ██║█████╗  ██████╔╝    ██║███████╗╚═╝\n" +
+                "                                                                       ██║███╗██║██║██║╚██╗██║██║╚██╗██║██╔══╝  ██╔══██╗    ██║╚════██║██╗\n" +
+                "                                                                       ╚███╔███╔╝██║██║ ╚████║██║ ╚████║███████╗██║  ██║    ██║███████║╚═╝\n" +
+                "                                                                        ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝    ╚═╝╚══════╝   \n" +
+                "                                                                                           \n" +
+                "                                                                                           " + activePlayer.getName());
     }
 }
 
