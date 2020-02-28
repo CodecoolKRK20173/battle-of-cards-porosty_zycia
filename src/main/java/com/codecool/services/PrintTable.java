@@ -1,5 +1,6 @@
-package com.codecool;
+package com.codecool.services;
 
+import com.codecool.Card;
 import com.codecool.players.Player;
 import com.github.tomaslanger.chalk.Chalk;
 

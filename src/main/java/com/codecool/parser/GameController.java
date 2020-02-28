@@ -1,8 +1,7 @@
 package com.codecool.parser;
 
 import com.codecool.Card;
-import com.codecool.PrintTable;
-import com.codecool.UserGlobalInput;
+import com.codecool.services.PrintTable;
 import com.codecool.comparator.ComparatorDefence;
 import com.codecool.comparator.ComparatorDribling;
 import com.codecool.comparator.ComparatorPace;

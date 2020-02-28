@@ -1,5 +1,6 @@
-package com.codecool;
+package com.codecool.players;
 
+import com.codecool.Card;
 import com.codecool.players.Player;
 
 import java.util.List;
